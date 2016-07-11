@@ -1,6 +1,8 @@
 Java Application - Maven Archetype
 ==================================
 
+[![Build Status](https://travis-ci.org/gantsign/java-application-maven-archetype.svg?branch=master)](https://travis-ci.org/gantsign/java-application-maven-archetype)
+
 Requirements
 ------------
 
