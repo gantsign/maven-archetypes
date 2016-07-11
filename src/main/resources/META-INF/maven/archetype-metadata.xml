@@ -9,5 +9,12 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory />
+      <includes>
+        <include>.gitattributes</include>
+        <include>.gitignore</include>
+      </includes>
+    </fileSet>
   </fileSets>
 </archetype-descriptor>
