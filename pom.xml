@@ -58,6 +58,8 @@
         </extensions>
     </build>
 
+    <url>https://github.com/gantsign/java-application-maven-archetype</url>
+
     <scm>
         <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
         <developerConnection>scm:git:git@github.com:gantsign/java-application-maven-archetype.git</developerConnection>
