@@ -18,7 +18,8 @@ To create a new project from this archetype, type:
 mvn archetype:generate \
     -DarchetypeGroupId=com.github.gantsign.java-application-maven-archetype \
     -DarchetypeArtifactId=java-application-maven-archetype \
-    -DarchetypeVersion=<version>
+    -DarchetypeVersion=<version> \
+    -DarchetypeRepository=https://dl.bintray.com/gantsign/maven
 ```
 
 License
