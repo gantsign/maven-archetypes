@@ -4,7 +4,7 @@
 
     <groupId>com.github.gantsign.java-application-maven-archetype</groupId>
     <artifactId>java-application-maven-archetype</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>Java Application Maven Archetype</name>
@@ -72,7 +72,7 @@
     <scm>
         <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
         <developerConnection>scm:git:git@github.com:gantsign/java-application-maven-archetype.git</developerConnection>
-        <tag>1.0.0</tag>
+        <tag>HEAD</tag>
         <url>https://github.com/gantsign/java-application-maven-archetype</url>
     </scm>
 
