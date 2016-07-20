@@ -66,4 +66,12 @@
         <url>https://github.com/gantsign/java-application-maven-archetype</url>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-gantsign-maven</id>
+            <name>gantsign-maven</name>
+            <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
 </project>
