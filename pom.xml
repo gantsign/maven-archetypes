@@ -17,6 +17,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <site.path>snapshot</site.path>
     </properties>
 
     <build>
@@ -64,6 +65,9 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.3</version>
+                    <configuration>
+                        <skipDeploy>true</skipDeploy>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -94,6 +98,25 @@
                             <goal>sort</goal>
                         </goals>
                         <phase>verify</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site-deploy</phase>
+                        <configuration>
+                            <server>github</server>
+                            <message>Updated maven site</message>
+                            <path>${site.path}</path>
+                            <merge>true</merge>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -239,6 +262,13 @@
                     <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
                 </repository>
             </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>release</id>
+            <properties>
+                <site.path>release</site.path>
+            </properties>
         </profile>
     </profiles>
 

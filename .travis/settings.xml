@@ -9,6 +9,11 @@
             <username>${env.BINTRAY_USER}</username>
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
+
+        <server>
+            <id>github</id>
+            <password>${env.GITHUB_OAUTH2TOKEN}</password>
+        </server>
     </servers>
 
 </settings>
