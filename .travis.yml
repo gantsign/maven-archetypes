@@ -2,11 +2,11 @@ language: java
 jdk:
   - oraclejdk8
 
-script: mvn install site
+script: mvn install site --batch-mode --show-version
 
 after_success:
-  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" == "" && mvn site-deploy --settings .travis/settings.xml
-  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" != "" && mvn deploy site-deploy --settings .travis/settings.xml -P publish-artifacts,release
+  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" == "" && mvn site-deploy --settings .travis/settings.xml --batch-mode --show-version
+  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" != "" && mvn deploy site-deploy --settings .travis/settings.xml -P publish-artifacts,release --batch-mode --show-version
 
 env:
   global:
