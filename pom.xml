@@ -9,6 +9,7 @@
     <packaging>maven-archetype</packaging>
 
     <name>Java Application Maven Archetype</name>
+    <description>Maven Archetype for building simple Java Applications</description>
 
     <prerequisites>
         <maven>3.2.5</maven>
@@ -158,7 +159,49 @@
         </extensions>
     </build>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>cim</report>
+                            <report>dependency-info</report>
+                            <report>distribution-management</report>
+                            <report>index</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>plugin-management</report>
+                            <report>plugins</report>
+                            <report>project-team</report>
+                            <report>scm</report>
+                            <report>summary</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <url>https://github.com/gantsign/java-application-maven-archetype</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>John Freeman</name>
+            <organization>GantSign Ltd.</organization>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
@@ -167,12 +210,36 @@
         <url>https://github.com/gantsign/java-application-maven-archetype</url>
     </scm>
 
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/gantsign/java-application-maven-archetype/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/gantsign/java-application-maven-archetype</url>
+    </ciManagement>
+
     <distributionManagement>
         <repository>
             <id>bintray-gantsign-maven</id>
             <name>gantsign-maven</name>
-            <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
+            <url>https://dl.bintray.com/gantsign/maven</url>
         </repository>
     </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>publish-artifacts</id>
+
+            <distributionManagement>
+                <repository>
+                    <id>bintray-gantsign-maven</id>
+                    <name>gantsign-maven</name>
+                    <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
 </project>

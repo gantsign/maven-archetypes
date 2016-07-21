@@ -5,7 +5,7 @@ jdk:
 script: mvn install
 
 after_success:
-  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" != "" && mvn deploy --settings .travis/settings.xml
+  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" != "" && mvn deploy --settings .travis/settings.xml -P publish-artifacts
 
 env:
   global:
