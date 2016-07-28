@@ -30,7 +30,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>2.5</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -63,7 +63,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.3</version>
+                    <version>3.5.1</version>
                     <configuration>
                         <skipDeploy>true</skipDeploy>
                     </configuration>
@@ -80,7 +80,7 @@
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
-                <version>2.4.0</version>
+                <version>2.5.0</version>
                 <configuration>
                     <predefinedSortOrder>custom_1</predefinedSortOrder>
                     <encoding>${project.build.sourceEncoding}</encoding>
@@ -229,8 +229,8 @@
     <scm>
         <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
         <developerConnection>scm:git:git@github.com:gantsign/java-application-maven-archetype.git</developerConnection>
-        <tag>HEAD</tag>
         <url>https://github.com/gantsign/java-application-maven-archetype</url>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
