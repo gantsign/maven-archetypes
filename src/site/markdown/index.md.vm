@@ -26,7 +26,10 @@ mvn archetype:generate \
 License
 -------
 
-MIT
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/java-application-maven-archetype/master/LICENSE)
+
+This software is licensed under the terms in the file named "LICENSE" in the
+root directory of this project.
 
 Author Information
 ------------------

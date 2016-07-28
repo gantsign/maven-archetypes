@@ -26,7 +26,10 @@ mvn archetype:generate \
 License
 -------
 
-MIT
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+This software is licensed under the terms in the file named "LICENSE" in the
+root directory of this project.
 
 Author Information
 ------------------
