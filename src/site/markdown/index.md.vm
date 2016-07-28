@@ -2,6 +2,7 @@ Java Application - Maven Archetype
 ==================================
 
 [![Build Status](https://travis-ci.org/gantsign/java-application-maven-archetype.svg?branch=master)](https://travis-ci.org/gantsign/java-application-maven-archetype)
+[![Dependency Status](https://www.versioneye.com/user/projects/579a005ea9f08d00384af107/badge.svg?style=flat-round)](https://www.versioneye.com/user/projects/579a005ea9f08d00384af107)
 
 Requirements
 ------------
