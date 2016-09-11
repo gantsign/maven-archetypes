@@ -12,6 +12,7 @@
     <fileSet encoding="UTF-8">
       <directory />
       <includes>
+        <include>.editorconfig</include>
         <include>.gitattributes</include>
         <include>.gitignore</include>
       </includes>
