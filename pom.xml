@@ -1,275 +1,275 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.gantsign.java-application-maven-archetype</groupId>
-    <artifactId>java-application-maven-archetype</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
-    <packaging>maven-archetype</packaging>
+  <groupId>com.github.gantsign.java-application-maven-archetype</groupId>
+  <artifactId>java-application-maven-archetype</artifactId>
+  <version>1.0.4-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
 
-    <name>Java Application Maven Archetype</name>
-    <description>Maven Archetype for building simple Java Applications</description>
+  <name>Java Application Maven Archetype</name>
+  <description>Maven Archetype for building simple Java Applications</description>
 
-    <prerequisites>
-        <maven>3.2.5</maven>
-    </prerequisites>
+  <prerequisites>
+    <maven>3.2.5</maven>
+  </prerequisites>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <site.path>snapshot</site.path>
-    </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <site.path>snapshot</site.path>
+  </properties>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-archetype-plugin</artifactId>
-                    <version>2.4</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.0.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.4</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
-                    <configuration>
-                        <tagNameFormat>@{project.version}</tagNameFormat>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.1</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.5.1</version>
-                    <configuration>
-                        <skipDeploy>true</skipDeploy>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>3.0.1</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.4</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5.3</version>
+          <configuration>
+            <tagNameFormat>@{project.version}</tagNameFormat>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.5.1</version>
+          <configuration>
+            <skipDeploy>true</skipDeploy>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
-        <plugins>
-            <plugin>
-                <groupId>com.github.ekryd.sortpom</groupId>
-                <artifactId>sortpom-maven-plugin</artifactId>
-                <version>2.5.0</version>
-                <configuration>
-                    <predefinedSortOrder>custom_1</predefinedSortOrder>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <lineSeparator>\n</lineSeparator>
-                    <keepBlankLines>true</keepBlankLines>
-                    <nrOfIndentSpace>4</nrOfIndentSpace>
-                    <sortProperties>true</sortProperties>
-                    <sortDependencies>scope,groupId,artifactId</sortDependencies>
-                    <sortPlugins>groupId,artifactId</sortPlugins>
-                    <expandEmptyElements>false</expandEmptyElements>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>sort</goal>
-                        </goals>
-                        <phase>verify</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.12</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site-deploy</phase>
-                        <configuration>
-                            <server>github</server>
-                            <message>Updated maven site</message>
-                            <path>${site.path}</path>
-                            <merge>true</merge>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.4.1</version>
-                <executions>
-                    <execution>
-                        <id>enforce-versions</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireMavenVersion>
-                                    <version>[3.2.5,3.4)</version>
-                                </requireMavenVersion>
-                                <requireJavaVersion>
-                                    <version>[1.8,1.9)</version>
-                                </requireJavaVersion>
-                                <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
-                                <dependencyConvergence />
-                                <requireReleaseDeps>
-                                    <message>No Snapshots Allowed!</message>
-                                </requireReleaseDeps>
-                                <!-- When there are multiple versions of a dependency you have to choose the maximum version. -->
-                                <requireUpperBoundDeps />
-                                <requirePluginVersions>
-                                    <message>Best Practice is to always define plugin versions!</message>
-                                    <banLatest>true</banLatest>
-                                    <banRelease>true</banRelease>
-                                    <banSnapshots>true</banSnapshots>
-                                    <phases>clean,deploy,site</phases>
-                                    <additionalPlugins>
-                                        <additionalPlugin>org.apache.maven.plugins:maven-javadoc-plugin</additionalPlugin>
-                                        <additionalPlugin>org.apache.maven.plugins:maven-release-plugin</additionalPlugin>
-                                        <additionalPlugin>org.apache.maven.plugins:maven-source-plugin</additionalPlugin>
-                                    </additionalPlugins>
-                                </requirePluginVersions>
-                                <bannedPlugins>
-                                    <excludes>
-                                        <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
-                                    </excludes>
-                                    <message>Please consider using the maven-invoker-plugin (http://maven.apache.org/plugins/maven-invoker-plugin/)!</message>
-                                </bannedPlugins>
-                                <requireNoRepositories>
-                                    <message>Best Practice is to never define repositories in pom.xml (use a repository manager instead)</message>
-                                </requireNoRepositories>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+    <plugins>
+      <plugin>
+        <groupId>com.github.ekryd.sortpom</groupId>
+        <artifactId>sortpom-maven-plugin</artifactId>
+        <version>2.5.0</version>
+        <configuration>
+          <predefinedSortOrder>custom_1</predefinedSortOrder>
+          <encoding>${project.build.sourceEncoding}</encoding>
+          <lineSeparator>\n</lineSeparator>
+          <keepBlankLines>true</keepBlankLines>
+          <nrOfIndentSpace>2</nrOfIndentSpace>
+          <sortProperties>true</sortProperties>
+          <sortDependencies>scope,groupId,artifactId</sortDependencies>
+          <sortPlugins>groupId,artifactId</sortPlugins>
+          <expandEmptyElements>false</expandEmptyElements>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>sort</goal>
+            </goals>
+            <phase>verify</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.12</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>site-deploy</phase>
+            <configuration>
+              <server>github</server>
+              <message>Updated maven site</message>
+              <path>${site.path}</path>
+              <merge>true</merge>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.4.1</version>
+        <executions>
+          <execution>
+            <id>enforce-versions</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>[3.2.5,3.4)</version>
+                </requireMavenVersion>
+                <requireJavaVersion>
+                  <version>[1.8,1.9)</version>
+                </requireJavaVersion>
+                <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
+                <dependencyConvergence />
+                <requireReleaseDeps>
+                  <message>No Snapshots Allowed!</message>
+                </requireReleaseDeps>
+                <!-- When there are multiple versions of a dependency you have to choose the maximum version. -->
+                <requireUpperBoundDeps />
+                <requirePluginVersions>
+                  <message>Best Practice is to always define plugin versions!</message>
+                  <banLatest>true</banLatest>
+                  <banRelease>true</banRelease>
+                  <banSnapshots>true</banSnapshots>
+                  <phases>clean,deploy,site</phases>
+                  <additionalPlugins>
+                    <additionalPlugin>org.apache.maven.plugins:maven-javadoc-plugin</additionalPlugin>
+                    <additionalPlugin>org.apache.maven.plugins:maven-release-plugin</additionalPlugin>
+                    <additionalPlugin>org.apache.maven.plugins:maven-source-plugin</additionalPlugin>
+                  </additionalPlugins>
+                </requirePluginVersions>
+                <bannedPlugins>
+                  <excludes>
+                    <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
+                  </excludes>
+                  <message>Please consider using the maven-invoker-plugin (http://maven.apache.org/plugins/maven-invoker-plugin/)!</message>
+                </bannedPlugins>
+                <requireNoRepositories>
+                  <message>Best Practice is to never define repositories in pom.xml (use a repository manager instead)</message>
+                </requireNoRepositories>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
 
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.archetype</groupId>
-                <artifactId>archetype-packaging</artifactId>
-                <version>2.4</version>
-            </extension>
-        </extensions>
-    </build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.4</version>
+      </extension>
+    </extensions>
+  </build>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>cim</report>
-                            <report>dependency-info</report>
-                            <report>distribution-management</report>
-                            <report>index</report>
-                            <report>issue-tracking</report>
-                            <report>license</report>
-                            <report>plugin-management</report>
-                            <report>plugins</report>
-                            <report>project-team</report>
-                            <report>scm</report>
-                            <report>summary</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-        </plugins>
-    </reporting>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.9</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>cim</report>
+              <report>dependency-info</report>
+              <report>distribution-management</report>
+              <report>index</report>
+              <report>issue-tracking</report>
+              <report>license</report>
+              <report>plugin-management</report>
+              <report>plugins</report>
+              <report>project-team</report>
+              <report>scm</report>
+              <report>summary</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 
+  <url>https://github.com/gantsign/java-application-maven-archetype</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>John Freeman</name>
+      <organization>GantSign Ltd.</organization>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
+    <developerConnection>scm:git:git@github.com:gantsign/java-application-maven-archetype.git</developerConnection>
     <url>https://github.com/gantsign/java-application-maven-archetype</url>
+    <tag>HEAD</tag>
+  </scm>
 
-    <licenses>
-        <license>
-            <name>MIT License</name>
-            <url>http://opensource.org/licenses/MIT</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/gantsign/java-application-maven-archetype/issues</url>
+  </issueManagement>
 
-    <developers>
-        <developer>
-            <name>John Freeman</name>
-            <organization>GantSign Ltd.</organization>
-        </developer>
-    </developers>
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/gantsign/java-application-maven-archetype</url>
+  </ciManagement>
 
-    <scm>
-        <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
-        <developerConnection>scm:git:git@github.com:gantsign/java-application-maven-archetype.git</developerConnection>
-        <url>https://github.com/gantsign/java-application-maven-archetype</url>
-        <tag>HEAD</tag>
-    </scm>
+  <distributionManagement>
+    <repository>
+      <id>bintray-gantsign-maven</id>
+      <name>gantsign-maven</name>
+      <url>https://dl.bintray.com/gantsign/maven</url>
+    </repository>
+  </distributionManagement>
 
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/gantsign/java-application-maven-archetype/issues</url>
-    </issueManagement>
+  <profiles>
+    <profile>
+      <id>publish-artifacts</id>
 
-    <ciManagement>
-        <system>Travis CI</system>
-        <url>https://travis-ci.org/gantsign/java-application-maven-archetype</url>
-    </ciManagement>
-
-    <distributionManagement>
+      <distributionManagement>
         <repository>
-            <id>bintray-gantsign-maven</id>
-            <name>gantsign-maven</name>
-            <url>https://dl.bintray.com/gantsign/maven</url>
+          <id>bintray-gantsign-maven</id>
+          <name>gantsign-maven</name>
+          <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
         </repository>
-    </distributionManagement>
+      </distributionManagement>
+    </profile>
 
-    <profiles>
-        <profile>
-            <id>publish-artifacts</id>
-
-            <distributionManagement>
-                <repository>
-                    <id>bintray-gantsign-maven</id>
-                    <name>gantsign-maven</name>
-                    <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-
-        <profile>
-            <id>release</id>
-            <properties>
-                <site.path>release</site.path>
-            </properties>
-        </profile>
-    </profiles>
+    <profile>
+      <id>release</id>
+      <properties>
+        <site.path>release</site.path>
+      </properties>
+    </profile>
+  </profiles>
 
 </project>
