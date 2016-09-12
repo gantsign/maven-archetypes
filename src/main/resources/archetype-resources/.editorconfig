@@ -13,3 +13,7 @@ trim_trailing_whitespace = true
 # Files with a smaller indent
 [*.{java,xml}]
 indent_size = 2
+
+# Java file encoding
+[*.java]
+charset = utf-8
