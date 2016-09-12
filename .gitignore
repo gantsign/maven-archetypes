@@ -273,3 +273,6 @@ hs_err_pid*
 
 ### IntelliJ with EditorConfig ###
 .idea/encodings.xml
+
+### IntelliJ with Maven ###
+.idea/compiler.xml
