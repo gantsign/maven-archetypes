@@ -20,6 +20,7 @@
     <fileSet encoding="UTF-8">
       <directory>.idea</directory>
       <includes>
+        <include>misc.xml</include>
         <include>checkstyle-idea.xml</include>
       </includes>
     </fileSet>
