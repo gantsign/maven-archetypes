@@ -3,6 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
+/**
+ * Description of class.
+ */
 public class Main {
 
   public static void main(String[] args) {
