@@ -17,5 +17,11 @@
         <include>.gitignore</include>
       </includes>
     </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>checkstyle-idea.xml</include>
+      </includes>
+    </fileSet>
   </fileSets>
 </archetype-descriptor>
