@@ -30,4 +30,8 @@ public class MainTest {
     }
   }
 
+  @Test
+  public void instantiate() {
+    new Main();
+  }
 }
