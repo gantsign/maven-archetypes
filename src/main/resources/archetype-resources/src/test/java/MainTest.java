@@ -3,9 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
-import static java.lang.String.format;
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.endsWith;
+import static org.junit.Assert.assertThat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -24,7 +24,8 @@ public class MainTest {
 
       Main.main(new String[0]);
 
-      assertEquals(format("Hello, World!%n"), new String(buffer.toByteArray(), UTF_8));
+      String actual = new String(buffer.toByteArray(), UTF_8).trim();
+      assertThat(actual, endsWith(".Main - Hello, World!"));
     } finally {
       System.setOut(out);
     }
