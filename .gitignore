@@ -276,3 +276,8 @@ hs_err_pid*
 
 ### IntelliJ with Maven ###
 .idea/compiler.xml
+
+### Project Specific ###
+
+# Checkstyle doesn't work for Java sources that are part of the archetype
+/.idea/checkstyle-idea.xml
