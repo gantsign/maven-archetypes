@@ -6,11 +6,11 @@ cache:
   directories:
     - ~/.m2
 
-script: mvn install site --batch-mode --show-version
+script: ./mvnw install site --batch-mode --show-version
 
 after_success:
-  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" == "" && mvn site-deploy --settings .travis/settings.xml --batch-mode --show-version
-  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" != "" && mvn deploy --settings .travis/settings.xml -P publish-artifacts --batch-mode --show-version && mvn site-deploy --settings .travis/settings.xml -P release --batch-mode --show-version
+  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" == "" && ./mvnw site-deploy --settings .travis/settings.xml --batch-mode --show-version
+  - test "${TRAVIS_PULL_REQUEST}" == "false" && test "${TRAVIS_TAG}" != "" && ./mvnw deploy --settings .travis/settings.xml -P publish-artifacts --batch-mode --show-version && ./mvnw site-deploy --settings .travis/settings.xml -P release --batch-mode --show-version
 
 env:
   global:
