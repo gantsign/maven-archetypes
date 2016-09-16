@@ -18,14 +18,15 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.20</version>
+    </dependency>
+    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.16.10</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.21</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
@@ -211,6 +212,7 @@
               <failOnWarning>true</failOnWarning>
               <usedDependencies>
                 <usedDependency>ch.qos.logback:logback-classic</usedDependency>
+                <usedDependency>org.projectlombok:lombok</usedDependency>
               </usedDependencies>
             </configuration>
           </execution>
