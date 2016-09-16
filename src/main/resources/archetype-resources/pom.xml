@@ -12,6 +12,7 @@
 
   <properties>
     <dependencies.slf4j.version>1.7.21</dependencies.slf4j.version>
+    <docker.repository>example/app</docker.repository>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -66,8 +67,15 @@
   </dependencies>
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>com.spotify</groupId>
+          <artifactId>dockerfile-maven-plugin</artifactId>
+          <version>1.2.1</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
@@ -207,6 +215,22 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>dockerfile-maven-plugin</artifactId>
+        <configuration>
+          <repository>${docker.repository}</repository>
+          <tag>${project.version}</tag>
+        </configuration>
+        <executions>
+          <execution>
+            <id>default</id>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <executions>
@@ -312,7 +336,7 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <configuration>
           <systemPropertyVariables>
-            <application.jar>${project.build.directory}/${project.build.finalName}.jar</application.jar>
+            <docker.image>${docker.repository}:${project.version}</docker.image>
           </systemPropertyVariables>
         </configuration>
         <executions>

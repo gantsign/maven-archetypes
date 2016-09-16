@@ -15,13 +15,13 @@ import org.junit.Test;
 
 public class MainIT {
 
-  private static final String APPLICATION_JAR = System.getProperty("application.jar");
+  private static final String DOCKER_IMAGE = System.getProperty("docker.image");
 
   @Test
   public void main()
     throws Exception {
 
-    String actual = execute("java", "-jar", APPLICATION_JAR).trim();
+    String actual = execute("docker", "run", "--rm", DOCKER_IMAGE).trim();
     assertThat(actual, endsWith(".Main - Hello, World!"));
   }
 
