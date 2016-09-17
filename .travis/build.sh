@@ -2,15 +2,19 @@
 
 set -e
 
+DOCKER_FILE_DIR="$(dirname "$0")"
+(cd $DOCKER_FILE_DIR && docker build -t mvn-docker .)
+
 mvn() {
     docker run --rm -it \
+        -v /var/run/docker.sock:/var/run/docker.sock \
         -v ~/.m2:/root/.m2 \
         -v "$PWD":/usr/src/maven-build \
         -w /usr/src/maven-build \
         -e "BINTRAY_USER=$BINTRAY_USER" \
         -e "BINTRAY_API_KEY=$BINTRAY_API_KEY" \
         -e "GITHUB_OAUTH2TOKEN=$GITHUB_OAUTH2TOKEN" \
-        maven:3.3.9-jdk-8-alpine mvn $@
+        mvn-docker mvn $@
 }
 
 mvn install site --batch-mode --show-version
