@@ -14,7 +14,7 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet>
       <directory>src/main/resources</directory>
       <includes>
         <include>.gitignore</include>
@@ -26,13 +26,13 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet>
       <directory>src/test/resources</directory>
       <includes>
         <include>.gitignore</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet>
       <directory />
       <includes>
         <include>.editorconfig</include>
@@ -46,7 +46,7 @@
         <include>docker-compose.yml</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet>
       <directory>.idea</directory>
       <includes>
         <include>misc.xml</include>
