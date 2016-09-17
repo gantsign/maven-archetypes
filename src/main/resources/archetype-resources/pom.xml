@@ -12,6 +12,7 @@
 
   <properties>
     <dependencies.slf4j.version>1.7.21</dependencies.slf4j.version>
+    <docker.repository>${dockerRepository}</docker.repository>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,6 +69,24 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>io.fabric8</groupId>
+          <artifactId>docker-maven-plugin</artifactId>
+          <version>0.16.2</version>
+          <extensions>true</extensions>
+          <dependencies>
+            <dependency>
+              <groupId>org.slf4j</groupId>
+              <artifactId>jcl-over-slf4j</artifactId>
+              <version>${dependencies.slf4j.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.slf4j</groupId>
+              <artifactId>slf4j-jdk14</artifactId>
+              <version>${dependencies.slf4j.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
@@ -207,6 +226,46 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <configuration>
+          <images>
+            <image>
+              <alias>app</alias>
+              <name>${docker.repository}</name>
+              <build>
+                <tags>
+                  <tag>latest</tag>
+                  <tag>${project.version}</tag>
+                </tags>
+                <from>openjdk:8-jre-alpine</from>
+                <assembly>
+                  <mode>dir</mode>
+                  <basedir>/usr/share/${project.artifactId}</basedir>
+                  <descriptorRef>artifact-with-dependencies</descriptorRef>
+                </assembly>
+                <entryPoint>
+                  <exec>
+                    <arg>java</arg>
+                    <arg>-jar</arg>
+                    <arg>/usr/share/${project.artifactId}/${project.build.finalName}.jar</arg>
+                  </exec>
+                </entryPoint>
+              </build>
+            </image>
+          </images>
+        </configuration>
+        <executions>
+          <execution>
+            <id>build-image</id>
+            <goals>
+              <goal>build</goal>
+            </goals>
+            <phase>package</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <executions>
@@ -240,18 +299,6 @@
                 <usedDependency>ch.qos.logback:logback-classic</usedDependency>
                 <usedDependency>org.projectlombok:lombok</usedDependency>
               </usedDependencies>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-dependencies</id>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <phase>initialize</phase>
-            <configuration>
-              <overWriteReleases>false</overWriteReleases>
-              <includeScope>runtime</includeScope>
-              <outputDirectory>${project.build.directory}/lib</outputDirectory>
             </configuration>
           </execution>
         </executions>
@@ -312,7 +359,7 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <configuration>
           <systemPropertyVariables>
-            <application.jar>${project.build.directory}/${project.build.finalName}.jar</application.jar>
+            <docker.image>${docker.repository}:${project.version}</docker.image>
           </systemPropertyVariables>
         </configuration>
         <executions>
@@ -331,7 +378,6 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
               <mainClass>${package}.Main</mainClass>
             </manifest>
           </archive>
