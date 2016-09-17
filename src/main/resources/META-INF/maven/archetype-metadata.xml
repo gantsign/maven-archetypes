@@ -43,7 +43,6 @@
     <fileSet filtered="true" encoding="UTF-8">
       <directory />
       <includes>
-        <include>Dockerfile</include>
         <include>docker-compose.yml</include>
       </includes>
     </fileSet>

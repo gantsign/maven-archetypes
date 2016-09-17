@@ -67,14 +67,25 @@
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
-
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>com.spotify</groupId>
-          <artifactId>dockerfile-maven-plugin</artifactId>
-          <version>1.2.1</version>
+          <groupId>io.fabric8</groupId>
+          <artifactId>docker-maven-plugin</artifactId>
+          <version>0.16.2</version>
+          <extensions>true</extensions>
+          <dependencies>
+            <dependency>
+              <groupId>org.slf4j</groupId>
+              <artifactId>jcl-over-slf4j</artifactId>
+              <version>${dependencies.slf4j.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.slf4j</groupId>
+              <artifactId>slf4j-jdk14</artifactId>
+              <version>${dependencies.slf4j.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -215,18 +226,42 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>com.spotify</groupId>
-        <artifactId>dockerfile-maven-plugin</artifactId>
+        <groupId>io.fabric8</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
         <configuration>
-          <repository>${docker.repository}</repository>
-          <tag>${project.version}</tag>
+          <images>
+            <image>
+              <alias>app</alias>
+              <name>${docker.repository}</name>
+              <build>
+                <tags>
+                  <tag>latest</tag>
+                  <tag>${project.version}</tag>
+                </tags>
+                <from>openjdk:8-jre-alpine</from>
+                <assembly>
+                  <mode>dir</mode>
+                  <basedir>/usr/share/${project.artifactId}</basedir>
+                  <descriptorRef>artifact-with-dependencies</descriptorRef>
+                </assembly>
+                <entryPoint>
+                  <exec>
+                    <arg>java</arg>
+                    <arg>-jar</arg>
+                    <arg>/usr/share/${project.artifactId}/${project.build.finalName}.jar</arg>
+                  </exec>
+                </entryPoint>
+              </build>
+            </image>
+          </images>
         </configuration>
         <executions>
           <execution>
-            <id>default</id>
+            <id>build-image</id>
             <goals>
               <goal>build</goal>
             </goals>
+            <phase>package</phase>
           </execution>
         </executions>
       </plugin>
@@ -264,18 +299,6 @@
                 <usedDependency>ch.qos.logback:logback-classic</usedDependency>
                 <usedDependency>org.projectlombok:lombok</usedDependency>
               </usedDependencies>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-dependencies</id>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <phase>initialize</phase>
-            <configuration>
-              <overWriteReleases>false</overWriteReleases>
-              <includeScope>runtime</includeScope>
-              <outputDirectory>${project.build.directory}/lib</outputDirectory>
             </configuration>
           </execution>
         </executions>
@@ -355,7 +378,6 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
               <mainClass>${package}.Main</mainClass>
             </manifest>
           </archive>
