@@ -281,6 +281,3 @@ hs_err_pid*
 
 # Checkstyle doesn't work for Java sources that are part of the archetype
 /.idea/checkstyle-idea.xml
-
-# Need to checkin Maven wrapper JAR
-!/.mvn/wrapper/maven-wrapper.jar
