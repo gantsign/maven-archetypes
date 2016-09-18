@@ -54,12 +54,19 @@ mvn() {
         -e "BINTRAY_USER=$BINTRAY_USER" \
         -e "BINTRAY_API_KEY=$BINTRAY_API_KEY" \
         -e "GITHUB_OAUTH2TOKEN=$GITHUB_OAUTH2TOKEN" \
+        -e "VERSIONEYE_API_KEY=$VERSIONEYE_API_KEY" \
         mvn-docker mvn $@
 }
 
 mvn install site --batch-mode --show-version
 
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    if [ "$TRAVIS_BRANCH" == "master" ]; then
+        mvn versioneye:update
+    else
+        mvn versioneye:securityAndLicenseCheck
+    fi
+
     if [ "$TRAVIS_TAG" == "" ]; then
         mvn site-deploy --settings .travis/settings.xml --batch-mode
     else
