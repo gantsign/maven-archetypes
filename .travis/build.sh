@@ -60,11 +60,15 @@ mvn() {
 
 mvn install site --batch-mode --show-version
 
+GENERATED_DIR=target/test-classes/projects/basic/project/java-application-maven-archetype-generated
+PROJECT_ID=57df1519c2cd3f00100b7741
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     if [ "$TRAVIS_BRANCH" == "master" ]; then
         mvn versioneye:update
+        (cd $GENERATED_DIR && mvn versioneye:update -DprojectId=$PROJECT_ID)
     else
         mvn versioneye:securityAndLicenseCheck
+        (cd $GENERATED_DIR && mvn versioneye:securityAndLicenseCheck -DprojectId=$PROJECT_ID)
     fi
 
     if [ "$TRAVIS_TAG" == "" ]; then
