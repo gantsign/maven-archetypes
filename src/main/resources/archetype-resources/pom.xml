@@ -127,6 +127,7 @@
             <compilerId>javac-with-errorprone</compilerId>
             <forceJavacCompilerUse>true</forceJavacCompilerUse>
             <showDeprecation>true</showDeprecation>
+            <showWarnings>true</showWarnings>
           </configuration>
           <dependencies>
             <!-- override plexus-compiler-javac-errorprone's dependency on
