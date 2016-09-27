@@ -5,11 +5,12 @@ package ${package};
 
 import static com.google.common.truth.Truth.assertThat;
 import static java.lang.ProcessBuilder.Redirect.INHERIT;
+import static java.nio.charset.Charset.defaultCharset;
 
-import com.google.common.io.ByteStreams;
+import com.google.common.io.CharStreams;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.Charset;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import org.junit.Test;
 
 public class MainIT {
@@ -30,11 +31,13 @@ public class MainIT {
     ProcessBuilder processBuilder = new ProcessBuilder(commandLine);
     processBuilder.redirectError(INHERIT);
     Process process = processBuilder.start();
-    InputStream inputStream = process.getInputStream();
-    byte[] bytes = ByteStreams.toByteArray(inputStream);
-    if (process.waitFor() != 0) {
-      throw new IOException("Command failed with exit code: " + process.exitValue());
+
+    try (Reader reader = new InputStreamReader(process.getInputStream(), defaultCharset())) {
+      String output = CharStreams.toString(reader);
+      if (process.waitFor() != 0) {
+        throw new IOException("Command failed with exit code: " + process.exitValue());
+      }
+      return output;
     }
-    return new String(bytes, Charset.defaultCharset());
   }
 }
