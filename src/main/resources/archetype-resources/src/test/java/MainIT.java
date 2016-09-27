@@ -3,9 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
+import static com.google.common.truth.Truth.assertThat;
 import static java.lang.ProcessBuilder.Redirect.INHERIT;
-import static org.hamcrest.CoreMatchers.endsWith;
-import static org.junit.Assert.assertThat;
 
 import com.google.common.io.ByteStreams;
 import java.io.IOException;
@@ -19,14 +18,14 @@ public class MainIT {
 
   @Test
   public void main()
-    throws Exception {
+      throws Exception {
 
     String actual = execute("docker", "run", "--rm", DOCKER_IMAGE).trim();
-    assertThat(actual, endsWith(".Main - Hello, World!"));
+    assertThat(actual).endsWith(".Main - Hello, World!");
   }
 
   private static String execute(String... commandLine)
-    throws IOException, InterruptedException {
+      throws IOException, InterruptedException {
 
     ProcessBuilder processBuilder = new ProcessBuilder(commandLine);
     processBuilder.redirectError(INHERIT);
