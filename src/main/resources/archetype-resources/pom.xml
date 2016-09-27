@@ -77,7 +77,7 @@
         <plugin>
           <groupId>io.fabric8</groupId>
           <artifactId>docker-maven-plugin</artifactId>
-          <version>0.16.2</version>
+          <version>0.16.3</version>
           <extensions>true</extensions>
           <dependencies>
             <dependency>
