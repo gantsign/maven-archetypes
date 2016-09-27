@@ -10,12 +10,16 @@ GROUP_NAME=$(id -g -n $USER)
 DOCKER_GID=$(getent group docker | cut -d: -f3)
 
 cat <<EOF > $DOCKER_FILE_DIR/Dockerfile
-FROM maven:3.3.9-jdk-8-alpine
+FROM maven:3.3.9-jdk-8
 
-RUN apk add --no-cache \\
+RUN set -x \\
+    && apt-get update \\
+    ; apt-get install -y \\
 		ca-certificates \\
 		curl \\
-		openssl
+		openssl \\
+    && apt-get clean \\
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.12.1
@@ -32,11 +36,10 @@ RUN set -x \\
 
 # Delete 'ping' group (999) as it's using the same GID as 'docker' group on Travis CI.
 
-RUN addgroup -g $GROUP_ID $GROUP_NAME \\
-    && adduser -h /home/$USER -D -G $GROUP_NAME -u $USER_ID $USER \\
-    && delgroup ping \\
-    && addgroup -g $DOCKER_GID docker \\
-    && addgroup $USER docker
+RUN addgroup --gid $GROUP_ID $GROUP_NAME \\
+    && adduser --home /home/$USER --disabled-password --ingroup $GROUP_NAME --uid $USER_ID $USER \\
+    && addgroup --gid $DOCKER_GID docker \\
+    && adduser $USER docker
 
 USER $USER
 
