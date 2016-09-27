@@ -66,14 +66,16 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     if [ "$TRAVIS_BRANCH" == "master" ]; then
         mvn versioneye:update
         (cd $GENERATED_DIR && mvn versioneye:update -DprojectId=$PROJECT_ID)
+
+        if [ "$TRAVIS_TAG" == "" ]; then
+            mvn site-deploy --settings .travis/settings.xml --batch-mode
+        fi
     else
         mvn versioneye:securityAndLicenseCheck
         (cd $GENERATED_DIR && mvn versioneye:securityAndLicenseCheck -DprojectId=$PROJECT_ID)
     fi
 
-    if [ "$TRAVIS_TAG" == "" ]; then
-        mvn site-deploy --settings .travis/settings.xml --batch-mode
-    else
+    if [ "$TRAVIS_TAG" != "" ]; then
         mvn deploy --settings .travis/settings.xml -P publish-artifacts --batch-mode \
             && mvn site-deploy --settings .travis/settings.xml -P release --batch-mode
     fi
