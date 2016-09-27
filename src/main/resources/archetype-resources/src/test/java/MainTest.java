@@ -3,9 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
+import static com.google.common.truth.Truth.assertThat;
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.hamcrest.CoreMatchers.endsWith;
-import static org.junit.Assert.assertThat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,7 +14,7 @@ public class MainTest {
 
   @Test
   public void main()
-    throws Exception {
+      throws Exception {
 
     PrintStream out = System.out;
     try {
@@ -25,7 +24,7 @@ public class MainTest {
       Main.main(new String[0]);
 
       String actual = new String(buffer.toByteArray(), UTF_8).trim();
-      assertThat(actual, endsWith(".Main - Hello, World!"));
+      assertThat(actual).endsWith(".Main - Hello, World!");
     } finally {
       System.setOut(out);
     }
