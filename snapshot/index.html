@@ -193,6 +193,58 @@
     -DarchetypeRepository=https://dl.bintray.com/gantsign/maven
 </pre></div></div></div>
 <div class="section">
+<h2><a name="Features"></a>Features</h2>
+<p>There&#x2019;s a lot of project setup required for an application these days. Far more than the skeleton POM and a couple of classes provided by the standard Maven archetype. The GantSign Maven Archetype provides the following:</p>
+
+<ul>
+  
+<li><tt>.gitattributes</tt> the text/binary handling for common file types.</li>
+  
+<li><tt>.gitignore</tt> using <a class="externalLink" href="http://gitignore.io">gitignore.io</a> templates to ignore  common operating system files, editor files, Java and Maven files that  shouldn&#x2019;t be versioned.</li>
+  
+<li><tt>.editorconfig</tt> configure line endings, indent and file encodings for common  editors/IDEs using <a class="externalLink" href="http://editorconfig.org">EditorConfig</a>.</li>
+  
+<li>Intellij IDEA config, JDK version and CheckStyle config.</li>
+  
+<li>
+<p>Maven</p>
+  
+<ul>
+    
+<li>Java version</li>
+    
+<li>File encoding</li>
+    
+<li>Reports</li>
+    
+<li>Minimum Maven version</li>
+    
+<li>Plugin versions</li>
+  </ul></li>
+  
+<li>
+<p>Maven plugins</p>
+  
+<ul>
+    
+<li><a class="externalLink" href="https://github.com/Ekryd/sortpom/wiki">sortpom</a>: make the <tt>pom.xml</tt>  easier to version control.</li>
+    
+<li><a class="externalLink" href="http://maven.apache.org/enforcer/maven-enforcer-plugin/">enforcer</a>:  ensure builds are reproducible and there are no class conflicts.</li>
+    
+<li><a class="externalLink" href="http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html">dependency</a>:  ensure dependencies are declared correctly.</li>
+    
+<li><a class="externalLink" href="https://maven.apache.org/plugins/maven-jdeps-plugin/">jdeps</a>: check for  use of internal APIs (prepare for Java 9).</li>
+    
+<li><a class="externalLink" href="https://dmp.fabric8.io">docker</a>: build Docker image for the application.</li>
+    
+<li><a class="externalLink" href="http://www.eclemma.org/jacoco/trunk/doc/maven.html">jacoco</a>: enforce  minimum code coverage.</li>
+    
+<li><a class="externalLink" href="http://maven.apache.org/plugins/maven-checkstyle-plugin/">checkstyle</a>:  fail build if bugs, bad practice, or poor style detected.</li>
+    
+<li><a class="externalLink" href="http://errorprone.info">errorprone</a>: extension to compiler plugin, fail  build if bugs or bad practice detected.</li>
+  </ul></li>
+</ul></div>
+<div class="section">
 <h2><a name="License"></a>License</h2>
 <p>This software is licensed under the terms in the file named &#x201c;LICENSE&#x201d; in the root directory of this project.</p></div>
 <div class="section">
