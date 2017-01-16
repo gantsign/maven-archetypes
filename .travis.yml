@@ -14,6 +14,11 @@ cache:
 
 script: .travis/build.sh
 
+branches:
+  only:
+    - master
+    - /^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)([\.\-].*)?$/
+
 env:
   global:
     - secure: KkK/+CebKZbNKqidfgzgtNUyHxr/GtokCpeayX82SUNloEg76nxh/89rEDSlPIBbLN5Re078R/HITL9OekuZWOl06sSRP+3wsG37QC68wB7bJE4T9/32sl84GwUfmDq8amZU5ig+RQMZSsHPgTB5oS02im0SKpoNgnqNAUpRltTQYgz0FAg0P0L1KL9KdhO/aHeIU3fFq+schZdPRBd3i/CERCLeGl1yz3dy0GeKkXmkfcV1G549g3HGGJoB8D6K5G/3lxSjjfHF9+YOXBxJc6J5DRbwqkFCbF7ZduV8rwIKWra79UJRJjn6WLZ3MyIeG0BF/0DYzspr/6HlxE1nEl/zujSx8TlRg+ECXhwg9EI6rvGg5AbB+ks3IqeK/znJ07i5wi1P3Su5AccNbDjYXa/zhrTsYTzhTvYlJQgAxZP/lEikX+lDBC6P/MgoSFXCkYRafKRSF8RtdLn7BP6NI7OPE5yHToH+xrCZLsHrwXLZSz3vaikUTY6517fQUBTiUV8B/HtxeZdqgbyN4xho4C03mhfKqdgBWGxryT0AL1kTFROtsyY6UGFm0wnQa9LGefc8H+j/hbnRRFh8Zi2oAS4oi+3gFNeR+zwIKynZBxze9sYA77wuxj1S23fzJKVyxNlrEBdJUlasWujgRITZOwANJCxwCIxLJ8i5W0FakZg=
