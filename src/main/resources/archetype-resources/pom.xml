@@ -11,7 +11,7 @@
   </prerequisites>
 
   <properties>
-    <dependencies.slf4j.version>1.7.22</dependencies.slf4j.version>
+    <dependencies.slf4j.version>1.7.24</dependencies.slf4j.version>
     <docker.repository>${dockerRepository}</docker.repository>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
