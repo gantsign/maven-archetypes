@@ -427,6 +427,43 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>1.12</version>
+        <configuration>
+          <projectName>${projectName}</projectName>
+          <licenseName>${licenseName}</licenseName>
+          <extraExtensions>
+            <kt>java</kt>
+          </extraExtensions>
+        </configuration>
+        <executions>
+          <execution>
+            <id>config</id>
+            <goals>
+              <goal>update-file-header</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <roots>${basedir}</roots>
+              <includes>.editorconfig,.gitattributes,.travis.yml,pom.xml</includes>
+              <extraExtensions>
+                <editorconfig>properties</editorconfig>
+                <gitattributes>properties</gitattributes>
+                <yml>properties</yml>
+              </extraExtensions>
+            </configuration>
+          </execution>
+          <execution>
+            <id>sources</id>
+            <goals>
+              <goal>update-file-header</goal>
+            </goals>
+            <phase>process-sources</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <executions>
@@ -520,5 +557,11 @@
       </plugin>
     </plugins>
   </reporting>
+
+  <inceptionYear>${copyrightStartYear}</inceptionYear>
+
+  <organization>
+    <name>${organizationName}</name>
+  </organization>
 
 </project>
