@@ -8,9 +8,12 @@ dist: trusty
 services:
   - docker
 
+before_cache:
+  - rm --force --recursive --verbose $HOME/.m2/repository/com/github/gantsign
+
 cache:
   directories:
-    - ~/.m2
+    - $HOME/.m2
 
 script: .travis/build.sh
 
