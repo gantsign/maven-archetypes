@@ -4,7 +4,7 @@
 
   <groupId>com.github.gantsign.java-application-maven-archetype</groupId>
   <artifactId>java-application-maven-archetype</artifactId>
-  <version>1.3.4-SNAPSHOT</version>
+  <version>1.4.1-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>Java Application Maven Archetype</name>
