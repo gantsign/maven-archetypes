@@ -10,10 +10,6 @@
   <name>Java Application Maven Archetype</name>
   <description>Maven Archetype for building simple Java Applications</description>
 
-  <prerequisites>
-    <maven>3.3.9</maven>
-  </prerequisites>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <site.path>snapshot</site.path>
