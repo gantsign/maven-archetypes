@@ -6,10 +6,6 @@
   <artifactId>${artifactId}</artifactId>
   <version>${version}</version>
 
-  <prerequisites>
-    <maven>3.2.5</maven>
-  </prerequisites>
-
   <properties>
     <dependencies.slf4j.version>1.7.25</dependencies.slf4j.version>
     <docker.repository>${dockerRepository}</docker.repository>
