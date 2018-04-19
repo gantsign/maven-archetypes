@@ -57,7 +57,6 @@ mvn() {
         -e "BINTRAY_USER=$BINTRAY_USER" \
         -e "BINTRAY_API_KEY=$BINTRAY_API_KEY" \
         -e "GITHUB_OAUTH2TOKEN=$GITHUB_OAUTH2TOKEN" \
-        -e "VERSIONEYE_API_KEY=$VERSIONEYE_API_KEY" \
         mvn-docker mvn $@
 }
 
@@ -67,15 +66,9 @@ GENERATED_DIR=target/test-classes/projects/basic/project/java-application-maven-
 PROJECT_ID=57df1519c2cd3f00100b7741
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     if [ "$TRAVIS_BRANCH" == "master" ]; then
-        mvn versioneye:update
-        (cd $GENERATED_DIR && mvn versioneye:update -DprojectId=$PROJECT_ID)
-
         if [ "$TRAVIS_TAG" == "" ]; then
             mvn site-deploy --settings .travis/settings.xml --batch-mode
         fi
-    else
-        mvn versioneye:securityAndLicenseCheck
-        (cd $GENERATED_DIR && mvn versioneye:securityAndLicenseCheck -DprojectId=$PROJECT_ID)
     fi
 
     if [ "$TRAVIS_TAG" != "" ]; then
