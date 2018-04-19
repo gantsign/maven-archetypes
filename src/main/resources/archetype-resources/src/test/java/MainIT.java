@@ -3,9 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
-import static com.google.common.truth.Truth.assertThat;
 import static java.lang.ProcessBuilder.Redirect.INHERIT;
 import static java.nio.charset.Charset.defaultCharset;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import com.google.common.io.CharStreams;
 import java.io.IOException;
