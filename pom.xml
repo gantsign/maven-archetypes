@@ -378,7 +378,7 @@
               <report>distribution-management</report>
               <report>index</report>
               <report>issue-management</report>
-              <report>license</report>
+              <report>licenses</report>
               <report>plugin-management</report>
               <report>plugins</report>
               <report>team</report>
