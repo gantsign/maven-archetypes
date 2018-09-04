@@ -1,1 +1,1 @@
-clean install site
+clean install site -DfailIfNoTests=false -Djacoco.skip=true

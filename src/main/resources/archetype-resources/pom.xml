@@ -7,11 +7,11 @@
   <version>${version}</version>
 
   <properties>
-    <dependencies.slf4j.version>1.7.25</dependencies.slf4j.version>
+    <dependencies.slf4j.version>@slf4j.version@</dependencies.slf4j.version>
     <docker.repository>${dockerRepository}</docker.repository>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <plugins.maven-compiler.version>3.7.0</plugins.maven-compiler.version>
+    <plugins.maven-compiler.version>@maven-compiler-plugin.version@</plugins.maven-compiler.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -21,7 +21,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>24.1-jre</version>
+        <version>@guava.version@</version>
         <scope>test</scope>
       </dependency>
       <dependency>
@@ -32,13 +32,13 @@
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.12</version>
+        <version>@junit.version@</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
-        <version>3.9.1</version>
+        <version>@assertj-core.version@</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
@@ -52,13 +52,13 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.16.20</version>
+      <version>@lombok.version@</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.3</version>
+      <version>@logback-classic.version@</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -79,7 +79,7 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-guava</artifactId>
-      <version>3.1.0</version>
+      <version>@assertj-guava.version@</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -90,7 +90,7 @@
         <plugin>
           <groupId>io.fabric8</groupId>
           <artifactId>docker-maven-plugin</artifactId>
-          <version>0.20.1</version>
+          <version>@docker-maven-plugin.version@</version>
           <extensions>true</extensions>
           <dependencies>
             <dependency>
@@ -108,7 +108,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>@maven-checkstyle-plugin.version@</version>
           <dependencies>
             <dependency>
               <groupId>org.slf4j</groupId>
@@ -125,7 +125,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>@maven-clean-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -135,62 +135,62 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>@maven-dependency-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
+          <version>@maven-deploy-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>2.21.0</version>
+          <version>@maven-failsafe-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
+          <version>@maven-install-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>@maven-jar-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>@maven-javadoc-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.3</version>
+          <version>@maven-release-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>@maven-resources-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.7</version>
+          <version>@maven-site-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>@maven-source-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.21.0</version>
+          <version>@maven-surefire-plugin.version@</version>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.1</version>
+          <version>@jacoco-maven-plugin.version@</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -199,7 +199,7 @@
       <plugin>
         <groupId>com.github.ekryd.sortpom</groupId>
         <artifactId>sortpom-maven-plugin</artifactId>
-        <version>2.8.0</version>
+        <version>@sortpom-maven-plugin.version@</version>
         <configuration>
           <predefinedSortOrder>custom_1</predefinedSortOrder>
           <encoding>${project.build.sourceEncoding}</encoding>
@@ -304,12 +304,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.4.1</version>
+        <version>@maven-enforcer-plugin.version@</version>
         <dependencies>
           <dependency>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>extra-enforcer-rules</artifactId>
-            <version>1.0-beta-7</version>
+            <version>@extra-enforcer-rules.version@</version>
           </dependency>
         </dependencies>
         <executions>
@@ -394,7 +394,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jdeps-plugin</artifactId>
-        <version>3.1.1</version>
+        <version>@maven-jdeps-plugin.version@</version>
         <configuration>
           <failOnWarning>true</failOnWarning>
         </configuration>
@@ -410,7 +410,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>license-maven-plugin</artifactId>
-        <version>1.16</version>
+        <version>@license-maven-plugin.version@</version>
         <configuration>
           <projectName>${projectName}</projectName>
           <licenseName>${licenseName}</licenseName>
@@ -507,22 +507,22 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
-        <version>2.5</version>
+        <version>@maven-jxr-plugin.version@</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.9</version>
+        <version>@maven-project-info-reports-plugin.version@</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>2.21.0</version>
+        <version>@maven-surefire-report-plugin.version@</version>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jdepend-maven-plugin</artifactId>
-        <version>2.0</version>
+        <version>@jdepend-maven-plugin.version@</version>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -570,12 +570,12 @@
                 <dependency>
                   <groupId>com.google.errorprone</groupId>
                   <artifactId>error_prone_core</artifactId>
-                  <version>2.1.1</version>
+                  <version>@error_prone_core.version@</version>
                 </dependency>
                 <dependency>
                   <groupId>org.codehaus.plexus</groupId>
                   <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                  <version>2.8.4</version>
+                  <version>@plexus-compiler-javac-errorprone.version@</version>
                 </dependency>
               </dependencies>
             </plugin>
