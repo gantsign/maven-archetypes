@@ -17,7 +17,7 @@
     <error_prone_core.version>2.1.1</error_prone_core.version>
     <extra-enforcer-rules.version>1.0-beta-7</extra-enforcer-rules.version>
     <guava.version>24.1-jre</guava.version>
-    <jacoco-maven-plugin.version>0.8.1</jacoco-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
     <junit.version>4.12</junit.version>
     <license-maven-plugin.version>1.16</license-maven-plugin.version>
