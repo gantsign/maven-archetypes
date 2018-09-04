@@ -377,11 +377,11 @@
               <report>dependency-info</report>
               <report>distribution-management</report>
               <report>index</report>
-              <report>issue-tracking</report>
+              <report>issue-management</report>
               <report>license</report>
               <report>plugin-management</report>
               <report>plugins</report>
-              <report>project-team</report>
+              <report>team</report>
               <report>scm</report>
               <report>summary</report>
             </reports>
