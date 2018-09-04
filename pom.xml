@@ -22,7 +22,7 @@
     <junit.version>4.12</junit.version>
     <license-maven-plugin.version>1.16</license-maven-plugin.version>
     <logback-classic.version>1.2.3</logback-classic.version>
-    <lombok.version>1.16.20</lombok.version>
+    <lombok.version>1.18.2</lombok.version>
     <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
     <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
