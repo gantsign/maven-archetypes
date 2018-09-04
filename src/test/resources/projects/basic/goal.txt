@@ -1,1 +1,1 @@
-clean install site -DfailIfNoTests=false -Djacoco.skip=true
+clean install site -DfailIfNoTests=false -Djacoco.skip=true -Dlicense.skipUpdateLicense=true
