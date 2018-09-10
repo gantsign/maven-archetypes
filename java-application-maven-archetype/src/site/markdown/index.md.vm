@@ -47,6 +47,8 @@ archetype. The GantSign Maven Archetype provides the following:
 
 * Maven plugins
 
+    * [jib](https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md)
+      for building smaller Docker images using layers
     * [fmt](https://github.com/coveo/fmt-maven-plugin): reformat your Java code
       as part of the build to conform to the
       [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
@@ -58,7 +60,6 @@ archetype. The GantSign Maven Archetype provides the following:
       ensure dependencies are declared correctly.
     * [jdeps](https://maven.apache.org/plugins/maven-jdeps-plugin/): check for
       use of internal APIs (prepare for Java 9).
-    * [docker](https://dmp.fabric8.io): build Docker image for the application.
     * [jacoco](http://www.eclemma.org/jacoco/trunk/doc/maven.html): enforce
       minimum code coverage.
     * [checkstyle](http://maven.apache.org/plugins/maven-checkstyle-plugin/):

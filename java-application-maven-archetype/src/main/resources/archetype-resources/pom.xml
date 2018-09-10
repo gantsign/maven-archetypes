@@ -88,22 +88,14 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>io.fabric8</groupId>
-          <artifactId>docker-maven-plugin</artifactId>
-          <version>@docker-maven-plugin.version@</version>
-          <extensions>true</extensions>
-          <dependencies>
-            <dependency>
-              <groupId>org.slf4j</groupId>
-              <artifactId>jcl-over-slf4j</artifactId>
-              <version>${dependencies.slf4j.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.slf4j</groupId>
-              <artifactId>slf4j-jdk14</artifactId>
-              <version>${dependencies.slf4j.version}</version>
-            </dependency>
-          </dependencies>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>@jib-maven-plugin.version@</version>
+          <configuration>
+            <to>
+              <image>${docker.repository}:${project.version}</image>
+            </to>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -234,46 +226,6 @@
               <goal>sort</goal>
             </goals>
             <phase>verify</phase>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>io.fabric8</groupId>
-        <artifactId>docker-maven-plugin</artifactId>
-        <configuration>
-          <images>
-            <image>
-              <alias>app</alias>
-              <name>${docker.repository}</name>
-              <build>
-                <tags>
-                  <tag>latest</tag>
-                  <tag>${project.version}</tag>
-                </tags>
-                <from>openjdk:8-jre-alpine</from>
-                <assembly>
-                  <mode>dir</mode>
-                  <basedir>/usr/share/${project.artifactId}</basedir>
-                  <descriptorRef>artifact-with-dependencies</descriptorRef>
-                </assembly>
-                <entryPoint>
-                  <exec>
-                    <arg>java</arg>
-                    <arg>-jar</arg>
-                    <arg>/usr/share/${project.artifactId}/${project.build.finalName}.jar</arg>
-                  </exec>
-                </entryPoint>
-              </build>
-            </image>
-          </images>
-        </configuration>
-        <executions>
-          <execution>
-            <id>build-image</id>
-            <goals>
-              <goal>build</goal>
-            </goals>
-            <phase>package</phase>
           </execution>
         </executions>
       </plugin>
@@ -563,6 +515,28 @@
   </organization>
 
   <profiles>
+    <profile>
+      <id>docker</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.google.cloud.tools</groupId>
+            <artifactId>jib-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>dockerBuild</goal>
+                </goals>
+                <phase>package</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
     <profile>
       <id>error-prone</id>
       <activation>
