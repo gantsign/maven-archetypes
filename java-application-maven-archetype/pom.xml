@@ -8,7 +8,6 @@
     <version>1.6.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <groupId>com.github.gantsign.java-application-maven-archetype</groupId>
   <artifactId>java-application-maven-archetype</artifactId>
   <packaging>maven-archetype</packaging>
 
