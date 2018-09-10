@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
 
     <bannerLeft>
-        <name>Maven Archetypes</name>
+        <name>Java Application Maven Archetype</name>
         <href>index.html</href>
     </bannerLeft>
 
