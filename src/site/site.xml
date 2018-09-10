@@ -19,7 +19,7 @@
             <sideBarEnabled>true</sideBarEnabled>
 
             <gitHub>
-                <projectId>gantsign/java-application-maven-archetype</projectId>
+                <projectId>gantsign/maven-archetypes</projectId>
                 <ribbonOrientation>right</ribbonOrientation>
                 <ribbonColor>black</ribbonColor>
             </gitHub>
