@@ -54,25 +54,7 @@ mvn() {
         -v ~/.m2:/home/$USER/.m2 \
         -v "$PWD":/usr/src/maven-build \
         -w /usr/src/maven-build \
-        -e "BINTRAY_USER=$BINTRAY_USER" \
-        -e "BINTRAY_API_KEY=$BINTRAY_API_KEY" \
-        -e "GITHUB_OAUTH2TOKEN=$GITHUB_OAUTH2TOKEN" \
-        mvn-docker mvn $@
+        mvn-docker mvn "$@"
 }
 
 mvn install site --batch-mode --show-version
-
-GENERATED_DIR=target/test-classes/projects/basic/project/java-application-maven-archetype-generated
-PROJECT_ID=57df1519c2cd3f00100b7741
-if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    if [ "$TRAVIS_BRANCH" == "master" ]; then
-        if [ "$TRAVIS_TAG" == "" ]; then
-            mvn site-deploy --settings .travis/settings.xml --batch-mode
-        fi
-    fi
-
-    if [ "$TRAVIS_TAG" != "" ]; then
-        mvn deploy --settings .travis/settings.xml -P publish-artifacts --batch-mode \
-            && mvn site-deploy --settings .travis/settings.xml -P release --batch-mode
-    fi
-fi

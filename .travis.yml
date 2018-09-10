@@ -1,12 +1,61 @@
-# Require the standard build environment
-sudo: required
+language: java
 
-# Require Ubuntu 14.04
-dist: trusty
+install: |
+  mvn install \
+    -DskipTests=true \
+    -Dmaven.javadoc.skip=true \
+    -Darchetype.test.skip=true \
+    --batch-mode \
+    --show-version
 
-# Require Docker
-services:
-  - docker
+jobs:
+  include:
+    - stage: Test
+      sudo: required
+
+      # Require Ubuntu 14.04
+      dist: trusty
+
+      # Require Docker
+      services:
+        - docker
+
+      script: .travis/test.sh
+
+    - stage: Deploy
+      script: |
+        mvn deploy \
+          -P publish-artifacts \
+          --settings .travis/settings.xml \
+          -Darchetype.test.skip=true \
+          --batch-mode \
+          --show-version
+      if: type = push AND tag IS present
+
+    - stage: Deploy site
+      name: Snapshot site deploy
+      script: |
+        mvn site site-deploy \
+          --settings .travis/settings.xml \
+          -Darchetype.test.skip=true \
+          --batch-mode \
+          --show-version
+      if: type = push AND tag IS blank AND branch = master
+
+    - name: Release site deploy
+      script: |
+        mvn site site-deploy \
+          -P release \
+          --settings .travis/settings.xml \
+          -Darchetype.test.skip=true \
+          --batch-mode \
+          --show-version
+      if: type = push AND tag IS present
+
+stages:
+  - test
+  - deploy
+  - deploy-site
 
 before_cache:
   - rm --force --recursive --verbose $HOME/.m2/repository/com/github/gantsign
@@ -14,8 +63,6 @@ before_cache:
 cache:
   directories:
     - $HOME/.m2
-
-script: .travis/build.sh
 
 branches:
   only:
