@@ -93,6 +93,8 @@ archetype. The GantSign Maven Archetype provides the following:
 
     * [jib](https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md)
       for building smaller Docker images using layers
+    * [reproducible-build](http://zlika.github.io/reproducible-build-maven-plugin/)
+      helps with Docker layer reuse
     * [fmt](https://github.com/coveo/fmt-maven-plugin): reformat your Java code
       as part of the build to conform to the
       [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
