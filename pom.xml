@@ -3,12 +3,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.gantsign.maven.archetypes</groupId>
-  <artifactId>java-application-maven-archetype</artifactId>
+  <artifactId>maven-archetypes</artifactId>
   <version>1.6.1-SNAPSHOT</version>
-  <packaging>maven-archetype</packaging>
+  <packaging>pom</packaging>
 
-  <name>Java Application Maven Archetype</name>
-  <description>Maven Archetype for building simple Java Applications</description>
+  <name>Maven Archetypes</name>
+  <description>Maven archetypes for various types of projects</description>
+
+  <modules>
+    <module>java-application-maven-archetype</module>
+  </modules>
 
   <properties>
     <assertj-core.version>3.11.1</assertj-core.version>
@@ -117,22 +121,6 @@
   </dependencyManagement>
 
   <build>
-    <resources>
-      <resource>
-        <filtering>true</filtering>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>archetype-resources/pom.xml</include>
-        </includes>
-      </resource>
-      <resource>
-        <filtering>false</filtering>
-        <directory>src/main/resources</directory>
-        <excludes>
-          <exclude>archetype-resources/pom.xml</exclude>
-        </excludes>
-      </resource>
-    </resources>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -324,6 +312,7 @@
                 <dependencyConvergence />
                 <requireReleaseDeps>
                   <message>No Snapshots Allowed!</message>
+                  <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
                 </requireReleaseDeps>
                 <!-- When there are multiple versions of a dependency you have to choose the maximum version. -->
                 <requireUpperBoundDeps />
@@ -431,6 +420,11 @@
       <name>gantsign-maven</name>
       <url>https://dl.bintray.com/gantsign/maven</url>
     </repository>
+    <site>
+      <id>github-pages-site</id>
+      <name>Deployment through GitHub's site deployment plugin</name>
+      <url>http://gantsign.com/maven-archetypes/${site.path}</url>
+    </site>
   </distributionManagement>
 
   <profiles>
