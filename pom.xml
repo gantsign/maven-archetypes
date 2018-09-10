@@ -20,13 +20,13 @@
     <checkstyle-config.name>GantSign</checkstyle-config.name>
     <checkstyle-config.url>https://raw.githubusercontent.com/gantsign/checkstyle-config/2.1.0/checkstyle.xml</checkstyle-config.url>
     <checkstyle.version>7.8.2</checkstyle.version>
-    <docker-maven-plugin.version>0.26.1</docker-maven-plugin.version>
     <error_prone_core.version>2.1.1</error_prone_core.version>
     <extra-enforcer-rules.version>1.0-beta-9</extra-enforcer-rules.version>
     <fmt-maven-plugin.version>2.5.1</fmt-maven-plugin.version>
     <guava.version>26.0-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
+    <jib-maven-plugin.version>0.9.10</jib-maven-plugin.version>
     <junit.version>4.12</junit.version>
     <license-maven-plugin.version>1.16</license-maven-plugin.version>
     <logback-classic.version>1.2.3</logback-classic.version>
@@ -138,9 +138,9 @@
           <version>${fmt-maven-plugin.version}</version>
         </plugin>
         <plugin>
-          <groupId>io.fabric8</groupId>
-          <artifactId>docker-maven-plugin</artifactId>
-          <version>${docker-maven-plugin.version}</version>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>${jib-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
