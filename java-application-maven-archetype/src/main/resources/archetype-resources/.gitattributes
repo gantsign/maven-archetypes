@@ -3,32 +3,32 @@
 
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
-.gitignore text
-.gitattributes text
 .editorconfig text
-*.xml text
-*.yml text
-*.yaml text
-*.json text
-*.txt text
-*.md text
+.gitattributes text
+.gitignore text
+*.css text
+*.groovy text
 *.htm text
 *.html text
-*.xhtml text
-*.js text
-*.jsx text
-*.ts text
-*.tsx text
-*.css text
-*.sass text
-*.scss text
-*.less text
 *.java text
+*.js text
+*.json text
+*.jsx text
 *.kt text
 *.kts text
-*.groovy text
-*.py text
+*.less text
+*.md text
 *.properties text
+*.py text
+*.sass text
+*.scss text
+*.ts text
+*.tsx text
+*.txt text
+*.xhtml text
+*.xml text
+*.yaml text
+*.yml text
 LICENSE text
 
 # Declare files that will always have CRLF line endings on checkout.
@@ -39,14 +39,14 @@ LICENSE text
 *.sh text eol=lf
 
 # Denote all files that are truly binary and should not be modified.
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.jar binary
-*.ico binary
+*.class binary
 *.eot binary
+*.gif binary
+*.ico binary
+*.jar binary
+*.jar binary
+*.jpeg binary
+*.jpg binary
+*.png binary
 *.tff binary
 *.woff binary
-*.class binary
-*.jar binary
