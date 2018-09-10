@@ -47,6 +47,9 @@ archetype. The GantSign Maven Archetype provides the following:
 
 * Maven plugins
 
+    * [fmt](https://github.com/coveo/fmt-maven-plugin): reformat your Java code
+      as part of the build to conform to the
+      [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
     * [sortpom](https://github.com/Ekryd/sortpom/wiki): make the `pom.xml`
       easier to version control.
     * [enforcer](http://maven.apache.org/enforcer/maven-enforcer-plugin/):
