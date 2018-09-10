@@ -20,7 +20,7 @@ jobs:
       services:
         - docker
 
-      script: .travis/test.sh
+      script: mvn install site --batch-mode --show-version
 
     - stage: Deploy
       script: |
