@@ -111,6 +111,11 @@
           <version>@maven-checkstyle-plugin.version@</version>
           <dependencies>
             <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>@checkstyle.version@</version>
+            </dependency>
+            <dependency>
               <groupId>org.slf4j</groupId>
               <artifactId>jcl-over-slf4j</artifactId>
               <version>${dependencies.slf4j.version}</version>
