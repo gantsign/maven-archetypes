@@ -336,3 +336,6 @@ $RECYCLE.BIN/
 
 # Checkstyle doesn't work for Java sources that are part of the archetype
 /.idea/checkstyle-idea.xml
+
+# Allow Maven Wrapper JAR to be committed
+!/.mvn/wrapper/maven-wrapper.jar
