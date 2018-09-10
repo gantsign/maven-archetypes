@@ -17,7 +17,7 @@ To create a new project from this archetype, type:
 
 ```bash
 mvn archetype:generate \
-    -DarchetypeGroupId=com.github.gantsign.java-application-maven-archetype \
+    -DarchetypeGroupId=com.github.gantsign.maven.archetypes \
     -DarchetypeArtifactId=java-application-maven-archetype \
     -DarchetypeVersion=<version> \
     -DarchetypeRepository=https://dl.bintray.com/gantsign/maven
@@ -52,7 +52,7 @@ rather than interactively:
 
 ```bash
 mvn archetype:generate \
-    -DarchetypeGroupId=com.github.gantsign.java-application-maven-archetype \
+    -DarchetypeGroupId=com.github.gantsign.maven.archetypes \
     -DarchetypeArtifactId=java-application-maven-archetype \
     -DarchetypeVersion=<version> \
     -DarchetypeRepository=https://dl.bintray.com/gantsign/maven \
