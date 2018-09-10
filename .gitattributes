@@ -5,6 +5,7 @@
 # to native line endings on checkout.
 .gitignore text
 .gitattributes text
+.editorconfig text
 *.xml text
 *.yml text
 *.yaml text
@@ -15,8 +16,15 @@
 *.html text
 *.xhtml text
 *.js text
+*.jsx text
+*.ts text
+*.tsx text
 *.css text
+*.sass text
+*.scss text
+*.less text
 *.properties text
+LICENSE text
 
 # Declare files that will always have CRLF line endings on checkout.
 *.bat text eol=crlf
@@ -30,3 +38,9 @@
 *.jpg binary
 *.jpeg binary
 *.gif binary
+*.ico binary
+*.eot binary
+*.tff binary
+*.woff binary
+*.class binary
+*.jar binary
