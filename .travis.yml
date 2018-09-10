@@ -34,22 +34,37 @@ jobs:
 
     - stage: Deploy site
       name: Snapshot site deploy
-      script: |
-        mvn site site-deploy \
-          --settings .travis/settings.xml \
-          -Darchetype.test.skip=true \
-          --batch-mode \
-          --show-version
-      if: type = push AND tag IS blank AND branch = master
+      script:
+        - |
+          mvn site \
+            --settings .travis/settings.xml \
+            -Darchetype.test.skip=true \
+            --batch-mode \
+            --show-version
+        - |
+          mvn site-deploy \
+            --settings .travis/settings.xml \
+            -Darchetype.test.skip=true \
+            --batch-mode \
+            --show-version
+    #   if: type = push AND tag IS blank AND branch = master
 
     - name: Release site deploy
-      script: |
-        mvn site site-deploy \
-          -P release \
-          --settings .travis/settings.xml \
-          -Darchetype.test.skip=true \
-          --batch-mode \
-          --show-version
+      script:
+        - |
+          mvn site \
+            -P release \
+            --settings .travis/settings.xml \
+            -Darchetype.test.skip=true \
+            --batch-mode \
+            --show-version
+        - |
+          mvn site-deploy \
+            -P release \
+            --settings .travis/settings.xml \
+            -Darchetype.test.skip=true \
+            --batch-mode \
+            --show-version
       if: type = push AND tag IS present
 
 stages:
