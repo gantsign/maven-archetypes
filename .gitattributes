@@ -6,6 +6,7 @@
 .editorconfig text
 .gitattributes text
 .gitignore text
+*.apt text
 *.css text
 *.htm text
 *.html text
