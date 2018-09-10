@@ -1,7 +1,7 @@
 Java Application - Maven Archetype
 ==================================
 
-[![Build Status](https://travis-ci.org/gantsign/java-application-maven-archetype.svg?branch=master)](https://travis-ci.org/gantsign/java-application-maven-archetype)
+[![Build Status](https://travis-ci.org/gantsign/maven-archetypes.svg?branch=master)](https://travis-ci.org/gantsign/maven-archetypes)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Requirements

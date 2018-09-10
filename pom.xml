@@ -391,7 +391,7 @@
     </plugins>
   </reporting>
 
-  <url>https://github.com/gantsign/java-application-maven-archetype</url>
+  <url>https://github.com/gantsign/maven-archetypes</url>
 
   <licenses>
     <license>
@@ -409,20 +409,20 @@
   </developers>
 
   <scm>
-    <connection>scm:git:https://github.com/gantsign/java-application-maven-archetype.git</connection>
-    <developerConnection>scm:git:git@github.com:gantsign/java-application-maven-archetype.git</developerConnection>
-    <url>https://github.com/gantsign/java-application-maven-archetype</url>
+    <connection>scm:git:https://github.com/gantsign/maven-archetypes.git</connection>
+    <developerConnection>scm:git:git@github.com:gantsign/maven-archetypes.git</developerConnection>
+    <url>https://github.com/gantsign/maven-archetypes</url>
     <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/gantsign/java-application-maven-archetype/issues</url>
+    <url>https://github.com/gantsign/maven-archetypes/issues</url>
   </issueManagement>
 
   <ciManagement>
     <system>Travis CI</system>
-    <url>https://travis-ci.org/gantsign/java-application-maven-archetype</url>
+    <url>https://travis-ci.org/gantsign/maven-archetypes</url>
   </ciManagement>
 
   <distributionManagement>
@@ -441,7 +441,7 @@
         <repository>
           <id>bintray-gantsign-maven</id>
           <name>gantsign-maven</name>
-          <url>https://api.bintray.com/maven/gantsign/maven/java-application-maven-archetype/;publish=1</url>
+          <url>https://api.bintray.com/maven/gantsign/maven/maven-archetypes/;publish=1</url>
         </repository>
       </distributionManagement>
     </profile>
