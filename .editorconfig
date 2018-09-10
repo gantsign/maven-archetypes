@@ -25,6 +25,10 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespaces = false
 
+# Files with a smaller indent
+[*.xml]
+indent_size = 2
+
 # IntelliJ files don't end in new lines
 [*.iml]
 insert_final_newline = false
