@@ -33,20 +33,8 @@ jobs:
       if: type = push AND tag IS present
 
     - stage: Deploy site
-      name: Snapshot site deploy
       script: |
         mvn site site-deploy \
-          --settings .travis/settings.xml \
-          -Darchetype.test.skip=true \
-          --batch-mode \
-          --show-version
-      if: type = push AND tag IS blank AND branch = master
-
-    - stage: Deploy site
-      name: Release site deploy
-      script: |
-        mvn site site-deploy \
-          -P release \
           --settings .travis/settings.xml \
           -Darchetype.test.skip=true \
           --batch-mode \
