@@ -56,7 +56,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <reproducible-build-maven-plugin.version>0.7</reproducible-build-maven-plugin.version>
     <site-maven-plugin.version>0.12</site-maven-plugin.version>
-    <site.path>snapshot</site.path>
     <slf4j.version>1.7.25</slf4j.version>
     <sortpom-maven-plugin.version>2.8.0</sortpom-maven-plugin.version>
   </properties>
@@ -306,7 +305,6 @@
             <configuration>
               <server>github</server>
               <message>Updated maven site</message>
-              <path>${site.path}</path>
               <merge>true</merge>
             </configuration>
           </execution>
@@ -456,7 +454,7 @@
     <site>
       <id>github-pages-site</id>
       <name>Deployment through GitHub's site deployment plugin</name>
-      <url>http://gantsign.com/maven-archetypes/${site.path}</url>
+      <url>http://gantsign.com/maven-archetypes</url>
     </site>
   </distributionManagement>
 
@@ -471,13 +469,6 @@
           <url>https://api.bintray.com/maven/gantsign/maven/maven-archetypes/;publish=1</url>
         </repository>
       </distributionManagement>
-    </profile>
-
-    <profile>
-      <id>release</id>
-      <properties>
-        <site.path>release</site.path>
-      </properties>
     </profile>
   </profiles>
 

@@ -9,8 +9,8 @@ Maven archetypes that demonstrate best practice out of the box.
 Archetypes
 ----------
 
-* [java-application-maven-archetype](https://gantsign.github.io/maven-archetypes/release/java-application-maven-archetype)
-* [java-library-maven-archetype](https://gantsign.github.io/maven-archetypes/release/java-library-maven-archetype)
+* [java-application-maven-archetype](https://gantsign.github.io/maven-archetypes/java-application-maven-archetype)
+* [java-library-maven-archetype](https://gantsign.github.io/maven-archetypes/java-library-maven-archetype)
 
 License
 -------
