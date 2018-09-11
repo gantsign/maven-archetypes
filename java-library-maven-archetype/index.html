@@ -33,7 +33,7 @@
         <ul class="breadcrumb">
         <li id="publishDate">Last Published: 2018-09-11<span class="divider">|</span>
 </li>
-          <li id="projectVersion">Version: 2.1.1</li>
+          <li id="projectVersion">Version: 2.2.0</li>
         </ul>
       </div>
       <div class="row-fluid">
@@ -107,6 +107,16 @@
 <li><a class="externalLink" href="http://errorprone.info">errorprone</a>: extension to compiler plugin, fail build if bugs or bad practice detected.</li>
 </ul>
 </li>
+<li>
+
+<p>Post-generation script</p>
+<ul>
+
+<li>Installs <a class="externalLink" href="https://github.com/takari/maven-wrapper">Maven Wrapper</a>.</li>
+<li>Runs the <a class="externalLink" href="https://github.com/Ekryd/sortpom/wiki">sortpom</a> plugin to reformat the POM.</li>
+<li>Runs the <a class="externalLink" href="http://www.mojohaus.org/license-maven-plugin/">license</a> plugin to add the licence headers.</li>
+</ul>
+</li>
 </ul></div>
 <div class="section">
 <h2><a name="Requirements"></a>Requirements</h2>
@@ -124,7 +134,7 @@
 <pre class="source">mvn archetype:generate \
     -DarchetypeGroupId=com.github.gantsign.maven.archetypes \
     -DarchetypeArtifactId=java-library-maven-archetype \
-    -DarchetypeVersion=2.1.1 \
+    -DarchetypeVersion=2.2.0 \
     -DarchetypeRepository=https://dl.bintray.com/gantsign/maven
 </pre></div></div>
 
@@ -192,7 +202,7 @@
 <pre class="source">mvn archetype:generate \
     -DarchetypeGroupId=com.github.gantsign.maven.archetypes \
     -DarchetypeArtifactId=java-library-maven-archetype \
-    -DarchetypeVersion=2.1.1 \
+    -DarchetypeVersion=2.2.0 \
     -DarchetypeRepository=https://dl.bintray.com/gantsign/maven \
     -DgroupId=com.gantsign.TODO \
     -DartifactId=TODO \
