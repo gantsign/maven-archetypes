@@ -276,12 +276,13 @@
             <configuration>
               <failOnWarning>true</failOnWarning>
               <usedDependencies>
-                <usedDependency>ch.qos.logback:logback-classic</usedDependency>
-                <usedDependency>org.projectlombok:lombok</usedDependency>
+                <dependency>ch.qos.logback:logback-classic</dependency>
+                <dependency>org.projectlombok:lombok</dependency>
               </usedDependencies>
               <ignoredUnusedDeclaredDependencies>
                 <dependency>org.assertj:assertj-guava</dependency>
               </ignoredUnusedDeclaredDependencies>
+              <outputXML>true</outputXML>
             </configuration>
           </execution>
         </executions>
