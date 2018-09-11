@@ -10,6 +10,7 @@ Archetypes
 ----------
 
 * [java-application-maven-archetype](https://gantsign.github.io/maven-archetypes/release/java-application-maven-archetype)
+* [java-library-maven-archetype](https://gantsign.github.io/maven-archetypes/release/java-library-maven-archetype)
 
 License
 -------
