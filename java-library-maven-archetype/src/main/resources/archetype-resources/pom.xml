@@ -24,12 +24,6 @@
         <version>${dependencies.slf4j.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>@lombok.version@</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>@guava.version@</version>
@@ -66,11 +60,6 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -275,9 +264,6 @@
             </goals>
             <configuration>
               <failOnWarning>true</failOnWarning>
-              <usedDependencies>
-                <dependency>org.projectlombok:lombok</dependency>
-              </usedDependencies>
               <ignoredUnusedDeclaredDependencies>
                 <dependency>junit:junit</dependency>
                 <dependency>org.assertj:assertj-core</dependency>
