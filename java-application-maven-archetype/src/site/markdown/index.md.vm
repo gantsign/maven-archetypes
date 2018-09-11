@@ -52,6 +52,16 @@ archetype. The GantSign Maven Archetype provides the following:
     * [errorprone](http://errorprone.info): extension to compiler plugin, fail
       build if bugs or bad practice detected.
 
+* Post-generation script
+
+    * Installs [Maven Wrapper](https://github.com/takari/maven-wrapper).
+    * Runs the [sortpom](https://github.com/Ekryd/sortpom/wiki) plugin to
+      reformat the POM.
+    * Runs the [license](http://www.mojohaus.org/license-maven-plugin/) plugin
+      to add the licence headers.
+    * Runs the [fmt](https://github.com/coveo/fmt-maven-plugin) plugin to
+      reformat the sample source code.
+
 Requirements
 ------------
 
