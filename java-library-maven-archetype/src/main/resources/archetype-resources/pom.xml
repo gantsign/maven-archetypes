@@ -30,12 +30,6 @@
         <scope>provided</scope>
       </dependency>
       <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-classic</artifactId>
-        <version>@logback-classic.version@</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>@guava.version@</version>
@@ -59,6 +53,12 @@
         <version>@assertj-guava.version@</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${dependencies.slf4j.version}</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -71,11 +71,6 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <scope>runtime</scope>
     </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -92,6 +87,11 @@
         <artifactId>assertj-guava</artifactId>
         <scope>test</scope>
       </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -276,7 +276,6 @@
             <configuration>
               <failOnWarning>true</failOnWarning>
               <usedDependencies>
-                <dependency>ch.qos.logback:logback-classic</dependency>
                 <dependency>org.projectlombok:lombok</dependency>
               </usedDependencies>
               <ignoredUnusedDeclaredDependencies>
