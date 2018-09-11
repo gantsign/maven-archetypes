@@ -42,7 +42,8 @@ jobs:
           --show-version
       if: type = push AND tag IS blank AND branch = master
 
-    - name: Release site deploy
+    - stage: Deploy site
+      name: Release site deploy
       script: |
         mvn site site-deploy \
           -P release \
