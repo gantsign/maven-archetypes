@@ -17,6 +17,7 @@
       <directory>src/main/java</directory>
       <includes>
         <include>**/*.java</include>
+        <include>.gitignore</include>
       </includes>
     </fileSet>
     <fileSet>
@@ -29,6 +30,7 @@
       <directory>src/test/java</directory>
       <includes>
         <include>**/*.java</include>
+        <include>.gitignore</include>
       </includes>
     </fileSet>
     <fileSet>
