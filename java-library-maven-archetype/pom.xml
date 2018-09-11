@@ -12,7 +12,7 @@
   <packaging>maven-archetype</packaging>
 
   <name>Java Library Maven Archetype</name>
-  <description>Maven archetype for building simple Java libraries</description>
+  <description>Maven archetype for building Java libraries</description>
 
   <build>
     <resources>

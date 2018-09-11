@@ -12,7 +12,7 @@
   <packaging>maven-archetype</packaging>
 
   <name>Kotlin Library Maven Archetype</name>
-  <description>Maven archetype for building simple Kotlin libraries</description>
+  <description>Maven archetype for building Kotlin libraries</description>
 
   <build>
     <resources>

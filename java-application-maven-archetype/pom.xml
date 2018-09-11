@@ -12,7 +12,7 @@
   <packaging>maven-archetype</packaging>
 
   <name>Java Application Maven Archetype</name>
-  <description>Maven archetype for building simple Java applications</description>
+  <description>Maven archetype for building Java applications</description>
 
   <build>
     <resources>
