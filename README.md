@@ -11,6 +11,7 @@ Archetypes
 
 * [java-application-maven-archetype](https://gantsign.github.io/maven-archetypes/java-application-maven-archetype)
 * [java-library-maven-archetype](https://gantsign.github.io/maven-archetypes/java-library-maven-archetype)
+* [kotlin-application-maven-archetype](https://gantsign.github.io/maven-archetypes/kotlin-application-maven-archetype)
 
 License
 -------
