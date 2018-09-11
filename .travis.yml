@@ -1,12 +1,6 @@
 language: java
 
-install: |
-  mvn install \
-    -DskipTests=true \
-    -Dmaven.javadoc.skip=true \
-    -Darchetype.test.skip=true \
-    --batch-mode \
-    --show-version
+install: .travis/install.sh
 
 jobs:
   include:
@@ -20,25 +14,14 @@ jobs:
       services:
         - docker
 
-      script: mvn install site --batch-mode --show-version
+      script: .travis/test.sh
 
     - stage: Deploy
-      script: |
-        mvn deploy \
-          -P publish-artifacts \
-          --settings .travis/settings.xml \
-          -Darchetype.test.skip=true \
-          --batch-mode \
-          --show-version
+      script: .travis/deploy.sh
       if: type = push AND tag IS present
 
     - stage: Deploy site
-      script: |
-        mvn site site-deploy \
-          --settings .travis/settings.xml \
-          -Darchetype.test.skip=true \
-          --batch-mode \
-          --show-version
+      script: .travis/deploy-site.sh
       if: type = push AND tag IS present
 
 stages:
