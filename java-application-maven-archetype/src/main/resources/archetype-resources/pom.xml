@@ -19,6 +19,11 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>@guava.version@</version>
+      </dependency>
+      <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>${dependencies.slf4j.version}</version>
@@ -37,12 +42,6 @@
         <groupId>org.slf4j</groupId>
         <artifactId>log4j-over-slf4j</artifactId>
         <version>${dependencies.slf4j.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>@guava.version@</version>
-        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
