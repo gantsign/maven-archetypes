@@ -4,6 +4,55 @@ Java Library - Maven Archetype
 [![Build Status](https://travis-ci.org/gantsign/maven-archetypes.svg?branch=master)](https://travis-ci.org/gantsign/maven-archetypes)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/maven-archetypes/master/LICENSE)
 
+Features
+--------
+
+There's a lot of project setup required for an application these days. Far more
+than the skeleton POM and a couple of classes provided by the standard Maven
+archetype. The GantSign Maven Archetype provides the following:
+
+* `.gitattributes` the text/binary handling for common file types.
+* `.gitignore` using [gitignore.io](http://gitignore.io) templates to ignore
+  common operating system files, editor files, Java and Maven files that
+  shouldn't be versioned.
+* `.editorconfig` configure line endings, indent and file encodings for common
+  editors/IDEs using [EditorConfig](http://editorconfig.org).
+* Intellij IDEA config, JDK version and CheckStyle config.
+* Maven
+
+    * Java version
+    * File encoding
+    * Reports
+    * Minimum Maven version
+    * Plugin versions
+
+* Maven plugins
+
+    * [flatten](https://www.mojohaus.org/flatten-maven-plugin/)
+      optimize the deployed POM by flattening parent POMs and stripping
+      unnecessary information.
+    * [reproducible-build](http://zlika.github.io/reproducible-build-maven-plugin/)
+      helps with Docker layer reuse.
+    * [fmt](https://github.com/coveo/fmt-maven-plugin): reformat your Java code
+      as part of the build to conform to the
+      [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
+    * [sortpom](https://github.com/Ekryd/sortpom/wiki): make the `pom.xml`
+      easier to version control.
+    * [enforcer](http://maven.apache.org/enforcer/maven-enforcer-plugin/):
+      ensure builds are reproducible and there are no class conflicts.
+    * [license](http://www.mojohaus.org/license-maven-plugin/):
+      ensure files include a license header.
+    * [dependency](http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html):
+      ensure dependencies are declared correctly.
+    * [jdeps](https://maven.apache.org/plugins/maven-jdeps-plugin/): check for
+      use of internal APIs (prepare for Java 9).
+    * [jacoco](http://www.eclemma.org/jacoco/trunk/doc/maven.html): enforce
+      minimum code coverage.
+    * [checkstyle](http://maven.apache.org/plugins/maven-checkstyle-plugin/):
+      fail build if bugs, bad practice, or poor style detected.
+    * [errorprone](http://errorprone.info): extension to compiler plugin, fail
+      build if bugs or bad practice detected.
+
 Requirements
 ------------
 
@@ -66,55 +115,6 @@ mvn archetype:generate \
     -DcopyrightStartYear=2017 \
     '-DdockerRepository=TODO'
 ```
-
-Features
---------
-
-There's a lot of project setup required for an application these days. Far more
-than the skeleton POM and a couple of classes provided by the standard Maven
-archetype. The GantSign Maven Archetype provides the following:
-
-* `.gitattributes` the text/binary handling for common file types.
-* `.gitignore` using [gitignore.io](http://gitignore.io) templates to ignore
-  common operating system files, editor files, Java and Maven files that
-  shouldn't be versioned.
-* `.editorconfig` configure line endings, indent and file encodings for common
-  editors/IDEs using [EditorConfig](http://editorconfig.org).
-* Intellij IDEA config, JDK version and CheckStyle config.
-* Maven
-
-    * Java version
-    * File encoding
-    * Reports
-    * Minimum Maven version
-    * Plugin versions
-
-* Maven plugins
-
-    * [flatten](https://www.mojohaus.org/flatten-maven-plugin/)
-      optimize the deployed POM by flattening parent POMs and stripping
-      unnecessary information.
-    * [reproducible-build](http://zlika.github.io/reproducible-build-maven-plugin/)
-      helps with Docker layer reuse.
-    * [fmt](https://github.com/coveo/fmt-maven-plugin): reformat your Java code
-      as part of the build to conform to the
-      [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
-    * [sortpom](https://github.com/Ekryd/sortpom/wiki): make the `pom.xml`
-      easier to version control.
-    * [enforcer](http://maven.apache.org/enforcer/maven-enforcer-plugin/):
-      ensure builds are reproducible and there are no class conflicts.
-    * [license](http://www.mojohaus.org/license-maven-plugin/):
-      ensure files include a license header.
-    * [dependency](http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html):
-      ensure dependencies are declared correctly.
-    * [jdeps](https://maven.apache.org/plugins/maven-jdeps-plugin/): check for
-      use of internal APIs (prepare for Java 9).
-    * [jacoco](http://www.eclemma.org/jacoco/trunk/doc/maven.html): enforce
-      minimum code coverage.
-    * [checkstyle](http://maven.apache.org/plugins/maven-checkstyle-plugin/):
-      fail build if bugs, bad practice, or poor style detected.
-    * [errorprone](http://errorprone.info): extension to compiler plugin, fail
-      build if bugs or bad practice detected.
 
 License
 -------
