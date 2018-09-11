@@ -12,6 +12,7 @@
 
   <modules>
     <module>java-application-maven-archetype</module>
+    <module>java-library-maven-archetype</module>
   </modules>
 
   <properties>

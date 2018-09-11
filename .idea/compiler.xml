@@ -4,6 +4,7 @@
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/java-application-maven-archetype/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/java-library-maven-archetype/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -11,10 +12,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-application-maven-archetype" />
+        <module name="java-library-maven-archetype" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-application-maven-archetype" target="1.5" />
+      <module name="java-library-maven-archetype" target="1.5" />
       <module name="maven-archetypes" target="1.5" />
     </bytecodeTargetLevel>
   </component>
