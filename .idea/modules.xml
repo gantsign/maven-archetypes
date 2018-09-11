@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/java-application-maven-archetype/java-application-maven-archetype.iml" filepath="$PROJECT_DIR$/java-application-maven-archetype/java-application-maven-archetype.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-library-maven-archetype/java-library-maven-archetype.iml" filepath="$PROJECT_DIR$/java-library-maven-archetype/java-library-maven-archetype.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-application-maven-archetype/kotlin-application-maven-archetype.iml" filepath="$PROJECT_DIR$/kotlin-application-maven-archetype/kotlin-application-maven-archetype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-library-maven-archetype/kotlin-library-maven-archetype.iml" filepath="$PROJECT_DIR$/kotlin-library-maven-archetype/kotlin-library-maven-archetype.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven-archetypes.iml" filepath="$PROJECT_DIR$/maven-archetypes.iml" />
     </modules>
   </component>
