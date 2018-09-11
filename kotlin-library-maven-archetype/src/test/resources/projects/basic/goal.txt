@@ -1,0 +1,1 @@
+clean site -DfailIfNoTests=false -Djacoco.skip=true -Dlicense.skipUpdateLicense=true
