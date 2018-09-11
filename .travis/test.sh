@@ -2,4 +2,4 @@
 
 set -x
 
-mvn install site --batch-mode --show-version
+./mvnw install site --batch-mode --show-version

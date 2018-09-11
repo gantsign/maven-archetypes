@@ -2,7 +2,7 @@
 
 set -x
 
-mvn deploy \
+./mvnw deploy \
     -P publish-artifacts \
     --settings .travis/settings.xml \
     -Darchetype.test.skip=true \
