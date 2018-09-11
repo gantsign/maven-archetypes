@@ -1,3 +1,4 @@
+#set($dollar = '$')
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -26,22 +27,22 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>${dependencies.slf4j.version}</version>
+        <version>${dollar}{dependencies.slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
-        <version>${dependencies.slf4j.version}</version>
+        <version>${dollar}{dependencies.slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jul-to-slf4j</artifactId>
-        <version>${dependencies.slf4j.version}</version>
+        <version>${dollar}{dependencies.slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>log4j-over-slf4j</artifactId>
-        <version>${dependencies.slf4j.version}</version>
+        <version>${dollar}{dependencies.slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -107,7 +108,7 @@
           <version>@jib-maven-plugin.version@</version>
           <configuration>
             <to>
-              <image>${docker.repository}:${project.version}</image>
+              <image>${dollar}{docker.repository}:${dollar}{project.version}</image>
             </to>
           </configuration>
         </plugin>
@@ -124,12 +125,12 @@
             <dependency>
               <groupId>org.slf4j</groupId>
               <artifactId>jcl-over-slf4j</artifactId>
-              <version>${dependencies.slf4j.version}</version>
+              <version>${dollar}{dependencies.slf4j.version}</version>
             </dependency>
             <dependency>
               <groupId>org.slf4j</groupId>
               <artifactId>slf4j-jdk14</artifactId>
-              <version>${dependencies.slf4j.version}</version>
+              <version>${dollar}{dependencies.slf4j.version}</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -141,7 +142,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${plugins.maven-compiler.version}</version>
+          <version>${dollar}{plugins.maven-compiler.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -229,7 +230,7 @@
         <version>@sortpom-maven-plugin.version@</version>
         <configuration>
           <predefinedSortOrder>custom_1</predefinedSortOrder>
-          <encoding>${project.build.sourceEncoding}</encoding>
+          <encoding>${dollar}{project.build.sourceEncoding}</encoding>
           <lineSeparator>\n</lineSeparator>
           <keepBlankLines>true</keepBlankLines>
           <nrOfIndentSpace>2</nrOfIndentSpace>
@@ -367,7 +368,7 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <configuration>
           <systemPropertyVariables>
-            <docker.image>${docker.repository}:${project.version}</docker.image>
+            <docker.image>${dollar}{docker.repository}:${dollar}{project.version}</docker.image>
           </systemPropertyVariables>
         </configuration>
         <executions>
@@ -426,7 +427,7 @@
             </goals>
             <phase>process-sources</phase>
             <configuration>
-              <roots>${basedir}</roots>
+              <roots>${dollar}{basedir}</roots>
               <includes>.editorconfig,.gitattributes,.travis.yml,pom.xml</includes>
               <extraExtensions>
                 <editorconfig>properties</editorconfig>
@@ -579,7 +580,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
-              <version>${plugins.maven-compiler.version}</version>
+              <version>${dollar}{plugins.maven-compiler.version}</version>
               <configuration>
                 <compilerId>javac-with-errorprone</compilerId>
                 <forceJavacCompilerUse>true</forceJavacCompilerUse>
