@@ -77,8 +77,7 @@ To create a new project from this archetype, type:
 mvn archetype:generate \
     -DarchetypeGroupId=${project.groupId} \
     -DarchetypeArtifactId=${project.artifactId} \
-    -DarchetypeVersion=${project.version} \
-    -DarchetypeRepository=https://dl.bintray.com/gantsign/maven
+    -DarchetypeVersion=${project.version}
 ```
 
 You can choose for the following licenses:
@@ -113,7 +112,6 @@ mvn archetype:generate \
     -DarchetypeGroupId=${project.groupId} \
     -DarchetypeArtifactId=${project.artifactId} \
     -DarchetypeVersion=${project.version} \
-    -DarchetypeRepository=https://dl.bintray.com/gantsign/maven \
     -DgroupId=com.gantsign.TODO \
     -DartifactId=TODO \
     -Dversion=1.0.0-SNAPSHOT \

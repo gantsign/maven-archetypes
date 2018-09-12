@@ -18,7 +18,7 @@ jobs:
 
     - stage: Deploy
       script: .travis/deploy.sh
-      if: type = push AND tag IS present
+      if: type = push AND (tag IS present OR branch = master)
 
     - stage: Deploy site
       script: .travis/deploy-site.sh
