@@ -3,18 +3,17 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-    <servers>
-        <server>
-            <id>bintray-gantsign-maven</id>
-            <username>${env.BINTRAY_USER}</username>
-            <password>${env.BINTRAY_API_KEY}</password>
-        </server>
-
-        <server>
-            <id>github</id>
-            <username>${env.GITHUB_USER}</username>
-            <password>${env.GITHUB_OAUTH2TOKEN}</password>
-        </server>
-    </servers>
+  <servers>
+    <server>
+      <id>bintray-gantsign-maven</id>
+      <username>${env.BINTRAY_USER}</username>
+      <password>${env.BINTRAY_API_KEY}</password>
+    </server>
+    <server>
+      <id>github</id>
+      <username>${env.GITHUB_USER}</username>
+      <password>${env.GITHUB_OAUTH2TOKEN}</password>
+    </server>
+  </servers>
 
 </settings>
