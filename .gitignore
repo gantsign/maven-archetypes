@@ -339,3 +339,6 @@ $RECYCLE.BIN/
 
 # Allow Maven Wrapper JAR to be committed
 !/.mvn/wrapper/maven-wrapper.jar
+
+# Ignore flattened POMs
+.flattened-pom.xml
