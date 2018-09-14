@@ -34,7 +34,7 @@
     <junit.version>4.12</junit.version>
     <kotlin-logging.version>1.6.10</kotlin-logging.version>
     <kotlin.version>1.2.70</kotlin.version>
-    <ktlint-maven-plugin.version>0.9.10</ktlint-maven-plugin.version>
+    <ktlint-maven-plugin.version>0.9.11</ktlint-maven-plugin.version>
     <license-maven-plugin.version>1.16</license-maven-plugin.version>
     <logback-classic.version>1.2.3</logback-classic.version>
     <lombok.version>1.18.2</lombok.version>
