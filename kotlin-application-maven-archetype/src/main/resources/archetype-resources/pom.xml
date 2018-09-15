@@ -25,6 +25,11 @@
         <version>${kotlin-logging.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.jetbrains</groupId>
+        <artifactId>annotations</artifactId>
+        <version>@annotations.version@</version>
+      </dependency>
+      <dependency>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-stdlib</artifactId>
         <version>${dollar}{kotlin.version}</version>
@@ -104,6 +109,10 @@
       <artifactId>kotlin-logging</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib</artifactId>
     </dependency>
@@ -139,6 +148,8 @@
   </dependencies>
 
   <build>
+    <sourceDirectory>${dollar}{project.basedir}/src/main/kotlin</sourceDirectory>
+    <testSourceDirectory>${dollar}{project.basedir}/src/test/kotlin</testSourceDirectory>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -285,13 +296,12 @@
             </goals>
             <configuration>
               <failOnWarning>true</failOnWarning>
-              <usedDependencies>
-                <dependency>ch.qos.logback:logback-classic</dependency>
-                <dependency>junit:junit</dependency>
-              </usedDependencies>
               <ignoredUnusedDeclaredDependencies>
+                <dependency>ch.qos.logback:logback-classic</dependency>
                 <dependency>io.github.microutils:kotlin-logging</dependency>
+                <dependency>junit:junit</dependency>
                 <dependency>org.assertj:assertj-core</dependency>
+                <dependency>org.jetbrains:annotations</dependency>
                 <dependency>org.jetbrains.kotlin:kotlin-stdlib-jdk8</dependency>
                 <dependency>org.jetbrains.kotlin:kotlin-stdlib</dependency>
                 <dependency>org.jetbrains.kotlin:kotlin-test-junit</dependency>
