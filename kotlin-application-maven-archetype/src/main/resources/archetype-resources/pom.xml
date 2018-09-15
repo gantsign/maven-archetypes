@@ -9,7 +9,7 @@
   <properties>
     <docker.imageName>${dollar}{dockerImageName}</docker.imageName>
     <kotlin.version>${kotlin.version}</kotlin.version>
-    <maven-compiler.version>${maven-compiler-plugin.version}</maven-compiler.version>
+    <maven-compiler-plugin.version>${maven-compiler-plugin.version}</maven-compiler-plugin.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -154,7 +154,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${dollar}{maven-compiler.version}</version>
+          <version>${dollar}{maven-compiler-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
