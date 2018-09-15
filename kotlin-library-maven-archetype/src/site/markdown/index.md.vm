@@ -116,7 +116,7 @@ mvn archetype:generate \
     '-DorganizationName=GantSign Ltd.' \
     -DlicenseName=apache_v2 \
     -DcopyrightStartYear=2017 \
-    '-DdockerRepository=TODO'
+    '-DdockerImageName=TODO'
 ```
 
 License

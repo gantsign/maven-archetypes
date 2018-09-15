@@ -7,7 +7,7 @@
   <version>${dollar}{version}</version>
 
   <properties>
-    <docker.repository>${dollar}{dockerRepository}</docker.repository>
+    <docker.imageName>${dollar}{dockerImageName}</docker.imageName>
     <kotlin.version>${kotlin.version}</kotlin.version>
     <maven-compiler.version>${maven-compiler-plugin.version}</maven-compiler.version>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -368,7 +368,7 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <configuration>
           <systemPropertyVariables>
-            <docker.image>${dollar}{docker.repository}:${dollar}{project.version}</docker.image>
+            <docker.image>${dollar}{docker.imageName}:${dollar}{project.version}</docker.image>
           </systemPropertyVariables>
         </configuration>
         <executions>
@@ -585,7 +585,7 @@
                 <phase>package</phase>
                 <configuration>
                   <to>
-                    <image>${dollar}{docker.repository}:${dollar}{project.version}</image>
+                    <image>${dollar}{docker.imageName}:${dollar}{project.version}</image>
                   </to>
                 </configuration>
               </execution>
@@ -597,7 +597,7 @@
                 <phase>package</phase>
                 <configuration>
                   <to>
-                    <image>${dollar}{docker.repository}:latest</image>
+                    <image>${dollar}{docker.imageName}:latest</image>
                   </to>
                 </configuration>
               </execution>
