@@ -321,8 +321,6 @@
                 <requireJavaVersion>
                   <version>[1.8,1.9)</version>
                 </requireJavaVersion>
-                <!-- When there are multiple versions of a dependency you have to choose which one to use. -->
-                <dependencyConvergence />
                 <requireReleaseDeps>
                   <message>No Snapshots Allowed!</message>
                 </requireReleaseDeps>
