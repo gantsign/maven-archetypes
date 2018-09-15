@@ -120,11 +120,6 @@
           <groupId>com.google.cloud.tools</groupId>
           <artifactId>jib-maven-plugin</artifactId>
           <version>${jib-maven-plugin.version}</version>
-          <configuration>
-            <to>
-              <image>${dollar}{docker.repository}:${dollar}{project.version}</image>
-            </to>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -573,10 +568,28 @@
             <artifactId>jib-maven-plugin</artifactId>
             <executions>
               <execution>
+                <id>docker-versioned-image</id>
                 <goals>
                   <goal>dockerBuild</goal>
                 </goals>
                 <phase>package</phase>
+                <configuration>
+                  <to>
+                    <image>${dollar}{docker.repository}:${dollar}{project.version}</image>
+                  </to>
+                </configuration>
+              </execution>
+              <execution>
+                <id>docker-latest-image</id>
+                <goals>
+                  <goal>dockerBuild</goal>
+                </goals>
+                <phase>package</phase>
+                <configuration>
+                  <to>
+                    <image>${dollar}{docker.repository}:latest</image>
+                  </to>
+                </configuration>
               </execution>
             </executions>
           </plugin>
