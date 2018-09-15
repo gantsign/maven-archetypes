@@ -7,7 +7,7 @@
   <version>${dollar}{version}</version>
 
   <properties>
-    <maven-compiler.version>${maven-compiler-plugin.version}</maven-compiler.version>
+    <maven-compiler-plugin.version>${maven-compiler-plugin.version}</maven-compiler-plugin.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -135,7 +135,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${dollar}{maven-compiler.version}</version>
+          <version>${dollar}{maven-compiler-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -549,7 +549,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
-              <version>${dollar}{maven-compiler.version}</version>
+              <version>${dollar}{maven-compiler-plugin.version}</version>
               <configuration>
                 <compilerId>javac-with-errorprone</compilerId>
                 <forceJavacCompilerUse>true</forceJavacCompilerUse>
