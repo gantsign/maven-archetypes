@@ -10,26 +10,26 @@ import java.io.PrintStream
 import java.nio.charset.StandardCharsets.UTF_8
 
 private fun captureStdout(callable: () -> Unit): String {
-  return System.out.let { out ->
-    val buffer = ByteArrayOutputStream()
-    try {
-      System.setOut(PrintStream(buffer, true, "UTF-8"))
+    return System.out.let { out ->
+        val buffer = ByteArrayOutputStream()
+        try {
+            System.setOut(PrintStream(buffer, true, "UTF-8"))
 
-      callable()
+            callable()
 
-      return@let buffer.toByteArray().toString(UTF_8).trim()
-    } finally {
-      System.setOut(out)
+            return@let buffer.toByteArray().toString(UTF_8).trim()
+        } finally {
+            System.setOut(out)
+        }
     }
-  }
 }
 
 class MainTest {
 
-  @Test
-  fun testMain() {
-    val actual = captureStdout { main(arrayOf()) }
-    assertThat(actual).endsWith(".MainKt - Hello, World!")
-  }
+    @Test
+    fun testMain() {
+        val actual = captureStdout { main(arrayOf()) }
+        assertThat(actual).endsWith(".Main - Hello, World!")
+    }
 
 }

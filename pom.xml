@@ -18,6 +18,7 @@
   </modules>
 
   <properties>
+    <annotations.version>16.0.2</annotations.version>
     <assertj-core.version>3.11.1</assertj-core.version>
     <assertj-guava.version>3.2.0</assertj-guava.version>
     <checkstyle-config.name>GantSign</checkstyle-config.name>
@@ -117,6 +118,11 @@
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-compiler-javac-errorprone</artifactId>
         <version>${plexus-compiler-javac-errorprone.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jetbrains</groupId>
+        <artifactId>annotations</artifactId>
+        <version>${annotations.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.kotlin</groupId>
