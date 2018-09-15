@@ -1,20 +1,19 @@
-#set($dollar = '$')
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>${groupId}</groupId>
-  <artifactId>${artifactId}</artifactId>
-  <version>${version}</version>
+  <groupId>${dollar}{groupId}</groupId>
+  <artifactId>${dollar}{artifactId}</artifactId>
+  <version>${dollar}{version}</version>
 
   <properties>
-    <kotlin.version>@kotlin.version@</kotlin.version>
-    <maven-compiler.version>@maven-compiler-plugin.version@</maven-compiler.version>
+    <kotlin.version>${kotlin.version}</kotlin.version>
+    <maven-compiler.version>${maven-compiler-plugin.version}</maven-compiler.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <slf4j.version>@slf4j.version@</slf4j.version>
+    <slf4j.version>${slf4j.version}</slf4j.version>
   </properties>
 
   <dependencyManagement>
@@ -22,7 +21,7 @@
       <dependency>
         <groupId>io.github.microutils</groupId>
         <artifactId>kotlin-logging</artifactId>
-        <version>@kotlin-logging.version@</version>
+        <version>${kotlin-logging.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jetbrains.kotlin</groupId>
@@ -62,13 +61,13 @@
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>@junit.version@</version>
+        <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
-        <version>@assertj-core.version@</version>
+        <version>${assertj-core.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
@@ -144,7 +143,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>@maven-clean-plugin.version@</version>
+          <version>${maven-clean-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -154,37 +153,37 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>@maven-dependency-plugin.version@</version>
+          <version>${maven-dependency-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>@maven-deploy-plugin.version@</version>
+          <version>${maven-deploy-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>@maven-failsafe-plugin.version@</version>
+          <version>${maven-failsafe-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>@maven-install-plugin.version@</version>
+          <version>${maven-install-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>@maven-jar-plugin.version@</version>
+          <version>${maven-jar-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>@maven-javadoc-plugin.version@</version>
+          <version>${maven-javadoc-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>@maven-release-plugin.version@</version>
+          <version>${maven-release-plugin.version}</version>
           <configuration>
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <tagNameFormat>@{project.version}</tagNameFormat>
@@ -193,27 +192,27 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>@maven-resources-plugin.version@</version>
+          <version>${maven-resources-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>@maven-site-plugin.version@</version>
+          <version>${maven-site-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>@maven-source-plugin.version@</version>
+          <version>${maven-source-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>@maven-surefire-plugin.version@</version>
+          <version>${maven-surefire-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>@jacoco-maven-plugin.version@</version>
+          <version>${jacoco-maven-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -222,7 +221,7 @@
       <plugin>
         <groupId>com.github.ekryd.sortpom</groupId>
         <artifactId>sortpom-maven-plugin</artifactId>
-        <version>@sortpom-maven-plugin.version@</version>
+        <version>${sortpom-maven-plugin.version}</version>
         <configuration>
           <predefinedSortOrder>custom_1</predefinedSortOrder>
           <encoding>${dollar}{project.build.sourceEncoding}</encoding>
@@ -246,7 +245,7 @@
       <plugin>
         <groupId>com.github.gantsign.maven</groupId>
         <artifactId>ktlint-maven-plugin</artifactId>
-        <version>@ktlint-maven-plugin.version@</version>
+        <version>${ktlint-maven-plugin.version}</version>
         <executions>
           <execution>
             <id>format-and-check</id>
@@ -260,7 +259,7 @@
       <plugin>
         <groupId>io.github.zlika</groupId>
         <artifactId>reproducible-build-maven-plugin</artifactId>
-        <version>@reproducible-build-maven-plugin.version@</version>
+        <version>${reproducible-build-maven-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -300,12 +299,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>@maven-enforcer-plugin.version@</version>
+        <version>${maven-enforcer-plugin.version}</version>
         <dependencies>
           <dependency>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>extra-enforcer-rules</artifactId>
-            <version>@extra-enforcer-rules.version@</version>
+            <version>${extra-enforcer-rules.version}</version>
           </dependency>
         </dependencies>
         <executions>
@@ -365,7 +364,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jdeps-plugin</artifactId>
-        <version>@maven-jdeps-plugin.version@</version>
+        <version>${maven-jdeps-plugin.version}</version>
         <configuration>
           <failOnWarning>true</failOnWarning>
         </configuration>
@@ -381,7 +380,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
-        <version>@flatten-maven-plugin.version@</version>
+        <version>${flatten-maven-plugin.version}</version>
         <configuration>
           <flattenMode>oss</flattenMode>
         </configuration>
@@ -405,10 +404,10 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>license-maven-plugin</artifactId>
-        <version>@license-maven-plugin.version@</version>
+        <version>${license-maven-plugin.version}</version>
         <configuration>
-          <projectName>${projectName}</projectName>
-          <licenseName>${licenseName}</licenseName>
+          <projectName>${dollar}{projectName}</projectName>
+          <licenseName>${dollar}{licenseName}</licenseName>
           <extraExtensions>
             <kt>java</kt>
           </extraExtensions>
@@ -526,17 +525,17 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>@maven-project-info-reports-plugin.version@</version>
+        <version>${maven-project-info-reports-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>@maven-surefire-report-plugin.version@</version>
+        <version>${maven-surefire-report-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jdepend-maven-plugin</artifactId>
-        <version>@jdepend-maven-plugin.version@</version>
+        <version>${jdepend-maven-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -553,10 +552,10 @@
     </plugins>
   </reporting>
 
-  <inceptionYear>${copyrightStartYear}</inceptionYear>
+  <inceptionYear>${dollar}{copyrightStartYear}</inceptionYear>
 
   <organization>
-    <name>${organizationName}</name>
+    <name>${dollar}{organizationName}</name>
   </organization>
 
 </project>
