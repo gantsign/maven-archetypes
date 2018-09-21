@@ -23,6 +23,9 @@
       <defaultValue>${artifactId}</defaultValue>
       <validationRegex>^[a-zA-Z0-9_][a-zA-Z0-9_\.\-]{0,127}$</validationRegex>
     </requiredProperty>
+    <requiredProperty key="intellijCodeStyleUrl">
+      <defaultValue>https://raw.githubusercontent.com/gantsign/code-style-intellij/2.0.0/GantSign2.xml</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 
   <fileSets>
@@ -67,7 +70,7 @@
     <fileSet>
       <directory>.idea</directory>
       <includes>
-        <include>*.xml</include>
+        <include>**/*.xml</include>
       </includes>
     </fileSet>
   </fileSets>

@@ -22,6 +22,7 @@
       <set>
         <option value=".*\.iml" />
         <option value="\.idea/.*" />
+        <option value="archetype-metadata\.xml" />
         <option value="pom\.xml" />
       </set>
     </option>

@@ -19,6 +19,9 @@
       <defaultValue>${package.getClass().forName("java.time.LocalDate").now().getYear()}</defaultValue>
       <validationRegex>^20[0-9]{2}$</validationRegex>
     </requiredProperty>
+    <requiredProperty key="intellijCodeStyleUrl">
+      <defaultValue>https://raw.githubusercontent.com/gantsign/code-style-intellij/2.0.0/GantSign2.xml</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 
   <fileSets>
@@ -59,7 +62,7 @@
     <fileSet>
       <directory>.idea</directory>
       <includes>
-        <include>*.xml</include>
+        <include>**/*.xml</include>
       </includes>
     </fileSet>
   </fileSets>
