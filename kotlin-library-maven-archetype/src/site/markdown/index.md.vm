@@ -114,7 +114,7 @@ rather than interactively:
 mvn archetype:generate \
     -DarchetypeGroupId=${project.groupId} \
     -DarchetypeArtifactId=${project.artifactId} \
-    -DarchetypeVersion=${project.version}
+    -DarchetypeVersion=${project.version} \
     -DgroupId=com.gantsign.TODO \
     -DartifactId=TODO \
     -Dversion=1.0.0-SNAPSHOT \
