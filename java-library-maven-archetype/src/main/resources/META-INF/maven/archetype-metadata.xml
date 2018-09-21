@@ -59,8 +59,7 @@
     <fileSet>
       <directory>.idea</directory>
       <includes>
-        <include>misc.xml</include>
-        <include>checkstyle-idea.xml</include>
+        <include>*.xml</include>
       </includes>
     </fileSet>
   </fileSets>
