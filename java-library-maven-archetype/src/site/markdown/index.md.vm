@@ -127,7 +127,7 @@ mvn archetype:generate \
     -DprojectName=TODO \
     '-DorganizationName=GantSign Ltd.' \
     -DlicenseName=apache_v2 \
-    -DcopyrightStartYear=2017
+    -DcopyrightStartYear=2018
 ```
 
 License
