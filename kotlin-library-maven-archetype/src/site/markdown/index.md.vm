@@ -18,7 +18,11 @@ archetype. The GantSign Maven Archetype provides the following:
   shouldn't be versioned.
 * `.editorconfig` configure line endings, indent and file encodings for common
   editors/IDEs using [EditorConfig](http://editorconfig.org).
-* Intellij IDEA config and JDK version
+
+* IntelliJ IDEA config
+
+    * JDK version
+
 * Maven
 
     * Java version
