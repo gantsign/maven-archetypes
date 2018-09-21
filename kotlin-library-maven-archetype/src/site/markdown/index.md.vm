@@ -23,6 +23,7 @@ archetype. The GantSign Maven Archetype provides the following:
 
     * JDK version
     * [Save Actions plugin](https://plugins.jetbrains.com/plugin/7642-save-actions)
+    * [GantSign code style](https://github.com/gantsign/code-style-intellij)
 
 * Maven
 
