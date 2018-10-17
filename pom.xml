@@ -32,7 +32,7 @@
     <guava.version>26.0-jre</guava.version>
     <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <jib-maven-plugin.version>0.9.11</jib-maven-plugin.version>
+    <jib-maven-plugin.version>0.9.13</jib-maven-plugin.version>
     <junit.version>4.12</junit.version>
     <kotlin-logging.version>1.6.10</kotlin-logging.version>
     <kotlin.version>1.2.71</kotlin.version>
