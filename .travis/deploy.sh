@@ -13,7 +13,7 @@ gpg --fast-import .travis/codesigning.asc
 
 set -x
 
-gpg --list-secret-keys
+gpg --list-secret-keys --verbose
 
 ./mvnw deploy \
     -P publish-artifacts \
