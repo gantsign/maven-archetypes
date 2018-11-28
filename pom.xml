@@ -62,7 +62,7 @@
     <maven-surefire-report-plugin.version>2.22.1</maven-surefire-report-plugin.version>
     <plexus-compiler-javac-errorprone.version>2.8.5</plexus-compiler-javac-errorprone.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <reproducible-build-maven-plugin.version>0.7</reproducible-build-maven-plugin.version>
+    <reproducible-build-maven-plugin.version>0.8</reproducible-build-maven-plugin.version>
     <slf4j.version>1.7.25</slf4j.version>
     <sortpom-maven-plugin.version>2.10.0</sortpom-maven-plugin.version>
   </properties>
