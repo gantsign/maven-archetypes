@@ -588,7 +588,7 @@
             <artifactId>jib-maven-plugin</artifactId>
             <executions>
               <execution>
-                <id>docker-versioned-image</id>
+                <id>docker-images</id>
                 <goals>
                   <goal>dockerBuild</goal>
                 </goals>
@@ -596,18 +596,9 @@
                 <configuration>
                   <to>
                     <image>${dollar}{docker.imageName}:${dollar}{project.version}</image>
-                  </to>
-                </configuration>
-              </execution>
-              <execution>
-                <id>docker-latest-image</id>
-                <goals>
-                  <goal>dockerBuild</goal>
-                </goals>
-                <phase>package</phase>
-                <configuration>
-                  <to>
-                    <image>${dollar}{docker.imageName}:latest</image>
+                    <tags>
+                      <tag>latest</tag>
+                    </tags>
                   </to>
                 </configuration>
               </execution>
