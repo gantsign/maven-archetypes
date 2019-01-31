@@ -18,7 +18,7 @@
   </modules>
 
   <properties>
-    <annotations.version>16.0.3</annotations.version>
+    <annotations.version>17.0.0</annotations.version>
     <assertj-core.version>3.11.1</assertj-core.version>
     <assertj-guava.version>3.2.1</assertj-guava.version>
     <checkstyle-config.name>GantSign</checkstyle-config.name>
