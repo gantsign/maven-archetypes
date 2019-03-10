@@ -4,7 +4,7 @@
 
   <groupId>com.github.gantsign.maven.archetypes</groupId>
   <artifactId>maven-archetypes</artifactId>
-  <version>2.5.2-SNAPSHOT</version>
+  <version>2.5.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Maven Archetypes</name>
