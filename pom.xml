@@ -19,7 +19,7 @@
 
   <properties>
     <annotations.version>17.0.0</annotations.version>
-    <assertj-core.version>3.12.1</assertj-core.version>
+    <assertj-core.version>3.12.2</assertj-core.version>
     <assertj-guava.version>3.2.1</assertj-guava.version>
     <checkstyle-config.name>GantSign</checkstyle-config.name>
     <checkstyle-config.url>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.0.0/checkstyle.xml</checkstyle-config.url>
