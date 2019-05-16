@@ -36,6 +36,7 @@ LICENSE text
 
 # Denote all files that are truly binary and should not be modified.
 *.class binary
+*.enc binary
 *.eot binary
 *.gif binary
 *.ico binary
