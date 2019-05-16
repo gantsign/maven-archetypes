@@ -1,3 +1,6 @@
+# Require Ubuntu 16.04
+dist: xenial
+
 language: java
 
 jdk:
@@ -9,9 +12,6 @@ jobs:
   include:
     - stage: Test
       sudo: required
-
-      # Require Ubuntu 14.04
-      dist: trusty
 
       # Require Docker
       services:
