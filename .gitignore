@@ -342,3 +342,6 @@ $RECYCLE.BIN/
 
 # Ignore flattened POMs
 .flattened-pom.xml
+
+# Ignore plain GPG key
+codesigning.asc
