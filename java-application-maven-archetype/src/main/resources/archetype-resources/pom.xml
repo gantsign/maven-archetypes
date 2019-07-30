@@ -611,7 +611,7 @@
                 <dependency>
                   <groupId>com.google.errorprone</groupId>
                   <artifactId>error_prone_core</artifactId>
-                  <version>${error_prone_core.version}</version>
+                  <version>${error-prone.version}</version>
                 </dependency>
                 <dependency>
                   <groupId>org.codehaus.plexus</groupId>
