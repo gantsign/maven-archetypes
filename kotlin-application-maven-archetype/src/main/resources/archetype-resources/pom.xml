@@ -180,7 +180,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>${maven-failsafe-plugin.version}</version>
+          <version>${maven-surefire.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -224,7 +224,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>${maven-surefire-plugin.version}</version>
+          <version>${maven-surefire.version}</version>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
@@ -547,7 +547,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>${maven-surefire-report-plugin.version}</version>
+        <version>${maven-surefire.version}</version>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
