@@ -16,7 +16,7 @@ set -x
 gpg --list-secret-keys --verbose
 
 ./mvnw deploy \
-    -P publish-artifacts \
+    -P publish-artifacts,sign-artifacts,ossrh-deploy \
     --settings .travis/settings.xml \
     -Darchetype.test.skip=true \
     --batch-mode \

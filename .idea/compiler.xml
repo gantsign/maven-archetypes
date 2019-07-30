@@ -20,11 +20,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="java-application-maven-archetype" target="1.5" />
-      <module name="java-library-maven-archetype" target="1.5" />
-      <module name="kotlin-application-maven-archetype" target="1.5" />
-      <module name="kotlin-library-maven-archetype" target="1.5" />
-      <module name="maven-archetypes" target="1.5" />
+      <module name="java-application-maven-archetype" target="1.8" />
+      <module name="java-library-maven-archetype" target="1.8" />
+      <module name="kotlin-application-maven-archetype" target="1.8" />
+      <module name="kotlin-library-maven-archetype" target="1.8" />
+      <module name="maven-archetypes" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
