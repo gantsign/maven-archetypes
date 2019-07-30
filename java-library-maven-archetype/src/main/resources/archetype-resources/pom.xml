@@ -264,7 +264,7 @@
             </goals>
             <phase>validate</phase>
             <configuration>
-              <configLocation>${checkstyle-config.url}</configLocation>
+              <configLocation>${checkstyle.config-location}</configLocation>
               <encoding>UTF-8</encoding>
               <consoleOutput>true</consoleOutput>
               <failsOnError>true</failsOnError>
