@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
+set -euxo pipefail
 
-./mvnw install site --batch-mode --show-version
+./mvnw install --batch-mode --show-version
+./mvnw site --batch-mode --show-version
