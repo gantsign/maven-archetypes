@@ -12,22 +12,25 @@ import org.junit.Test;
 
 public class MainTest {
 
-  @Test
-  public void main()
-      throws Exception {
+  private static String captureStdout(Runnable runnable) throws Exception {
 
     PrintStream out = System.out;
     try {
       ByteArrayOutputStream buffer = new ByteArrayOutputStream();
       System.setOut(new PrintStream(buffer, true, "UTF-8"));
 
-      Main.main(new String[0]);
+      runnable.run();
 
-      String actual = new String(buffer.toByteArray(), UTF_8).trim();
-      assertThat(actual).endsWith(".Main - Hello, World!");
+      return new String(buffer.toByteArray(), UTF_8).trim();
     } finally {
       System.setOut(out);
     }
+  }
+
+  @Test
+  public void main() throws Exception {
+    String actual = captureStdout(() -> Main.main(new String[0]));
+    assertThat(actual).endsWith(".Main - Hello, World!");
   }
 
   @Test
