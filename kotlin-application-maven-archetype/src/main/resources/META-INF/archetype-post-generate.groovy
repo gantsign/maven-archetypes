@@ -49,8 +49,6 @@ def writeInspectionProfile() {
 
 run("mvn -N io.takari:maven:wrapper")
 run("./mvnw sortpom:sort")
-run("./mvnw license:update-file-header@config")
-run("./mvnw license:update-file-header@sources")
 run("./mvnw ktlint:format")
 writeCodeStyle()
 writeInspectionProfile()
