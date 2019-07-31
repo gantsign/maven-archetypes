@@ -399,13 +399,14 @@
           </execution>
         </executions>
       </plugin>
+      <!-- Uncomment to auto-add license header to files. -->
+      <!--
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>license-maven-plugin</artifactId>
-        <version>${license-maven-plugin.version}</version>
         <configuration>
           <projectName>${dollar}{projectName}</projectName>
-          <licenseName>${dollar}{licenseName}</licenseName>
+          <licenseName>TODO e.g. apache_v2 (for options run: mvn -N license:license-list)</licenseName>
           <extraExtensions>
             <kt>java</kt>
           </extraExtensions>
@@ -436,6 +437,7 @@
           </execution>
         </executions>
       </plugin>
+      -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
