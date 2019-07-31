@@ -579,7 +579,7 @@
 
   <profiles>
     <profile>
-      <id>docker</id>
+      <id>docker-local</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
