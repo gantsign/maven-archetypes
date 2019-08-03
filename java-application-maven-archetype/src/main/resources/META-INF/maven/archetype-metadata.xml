@@ -65,6 +65,7 @@
       <directory />
       <includes>
         <include>docker-compose.yml</include>
+        <include>DEVELOPMENT.md</include>
       </includes>
     </fileSet>
     <fileSet>
