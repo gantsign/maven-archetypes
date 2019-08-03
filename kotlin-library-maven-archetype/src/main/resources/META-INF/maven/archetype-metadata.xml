@@ -59,6 +59,12 @@
         <include>.gitignore</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory />
+      <includes>
+        <include>DEVELOPMENT.md</include>
+      </includes>
+    </fileSet>
     <fileSet>
       <directory>.idea</directory>
       <includes>
