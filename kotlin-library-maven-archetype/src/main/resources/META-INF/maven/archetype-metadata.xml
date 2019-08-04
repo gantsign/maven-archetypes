@@ -52,6 +52,12 @@
       </includes>
     </fileSet>
     <fileSet>
+      <directory>config</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet>
       <directory />
       <includes>
         <include>.editorconfig</include>

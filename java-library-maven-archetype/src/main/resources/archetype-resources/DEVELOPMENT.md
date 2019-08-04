@@ -40,3 +40,39 @@ $h4 Windows
 ```bash
 mvnw.cmd install
 ```
+
+$h2 Security scanning
+
+This project includes the [SpotBugs Maven Plugin](https://spotbugs.github.io/spotbugs-maven-plugin)
+with the [Find Security Bugs](https://find-sec-bugs.github.io) plugin for performing static analysis
+on your code. The static analysis can be quite time consuming so it's not run by default.
+
+To run the security scan run the following from the project root:
+
+$h4 Linux/macOS
+
+```bash
+./mvnw clean install
+./mvnw spotbugs:spotbugs -P find-sec-bugs
+```
+
+$h4 Windows
+
+```bash
+mvnw.cmd clean install
+mvnw.cmd spotbugs:spotbugs -P find-sec-bugs
+```
+
+To view the results run the following from each Maven module directory:
+
+$h4 Linux/macOS
+
+```bash
+./mvnw spotbugs:gui -P find-sec-bugs
+```
+
+$h4 Windows
+
+```bash
+mvnw.cmd spotbugs:gui -P find-sec-bugs
+```

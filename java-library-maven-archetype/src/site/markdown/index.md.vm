@@ -68,6 +68,14 @@ archetype. The GantSign Maven Archetype provides the following:
     * Runs the [sortpom](https://github.com/Ekryd/sortpom/wiki) plugin to
       reformat the POM.
 
+* Security scanning
+
+    This archetype includes the
+    [SpotBugs Maven Plugin](https://spotbugs.github.io/spotbugs-maven-plugin)
+    with the [Find Security Bugs](https://find-sec-bugs.github.io) plugin for performing static
+    analysis on the code. The static analysis can be quite time consuming so it's not run by
+    default.
+
 Requirements
 ------------
 
