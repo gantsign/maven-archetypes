@@ -69,6 +69,14 @@ archetype. The GantSign Maven Archetype provides the following:
     * Runs the [fmt](https://github.com/coveo/fmt-maven-plugin) plugin to
       reformat the sample source code.
 
+* Security scanning
+
+    This archetype includes the
+    [SpotBugs Maven Plugin](https://spotbugs.github.io/spotbugs-maven-plugin)
+    with the [Find Security Bugs](https://find-sec-bugs.github.io) plugin for performing static
+    analysis on the code. The static analysis can be quite time consuming so it's not run by
+    default.
+
 Requirements
 ------------
 
