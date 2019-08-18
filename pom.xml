@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.github.gantsign.parent</groupId>
     <artifactId>common-parent</artifactId>
-    <version>0.9.7</version>
+    <version>0.9.9</version>
     <relativePath />
   </parent>
 
@@ -28,7 +28,7 @@
     <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.0.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.config-name>GantSign</checkstyle.config-name>
     <dollar>$</dollar>
-    <gantsign-parent.version>0.9.7</gantsign-parent.version>
+    <gantsign-parent.version>0.9.9</gantsign-parent.version>
     <maven-archetype-plugin.version>3.1.1</maven-archetype-plugin.version>
   </properties>
 
