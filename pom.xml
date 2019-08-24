@@ -29,7 +29,7 @@
     <checkstyle.config-name>GantSign</checkstyle.config-name>
     <dollar>$</dollar>
     <gantsign-parent.version>0.9.9</gantsign-parent.version>
-    <maven-archetype-plugin.version>3.1.1</maven-archetype-plugin.version>
+    <maven-archetype-plugin.version>3.1.2</maven-archetype-plugin.version>
   </properties>
 
   <dependencyManagement>
