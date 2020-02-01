@@ -17,8 +17,8 @@ in your `pom.xml`:
 ```xml
 <properties>
   ...
-  <java.below-version>12</java.below-version>
-  <java.version>11</java.version>
+  <java.require.version>[11,12)</java.require.version>
+  <java.target.version>11</java.target.version>
   ...
 </properties>
 ```

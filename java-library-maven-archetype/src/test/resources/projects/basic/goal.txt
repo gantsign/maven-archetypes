@@ -1,1 +1,1 @@
-clean site -DfailIfNoTests=false -Djacoco.skip=true -Dlicense.skipUpdateLicense=true
+clean site -DfailIfNoTests=false -Djacoco.skip=true -Dlicense.skipUpdateLicense=true -Djava.target.version=11 -Djava.require.version=11

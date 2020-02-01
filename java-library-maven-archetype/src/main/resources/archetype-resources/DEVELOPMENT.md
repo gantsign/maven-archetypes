@@ -11,14 +11,20 @@ $h2 Requirements
 
 $h3 Changing the required Java version
 
-Java 8 is required by default. To move the project to Java 11, change the following two properties
-in your `pom.xml`:
+Java 8 is required by default. To move the project to Java 11, change the parent POM artifactId and
+the following two properties in your `pom.xml`:
 
 ```xml
+<parent>
+  <groupId>com.github.gantsign.parent</groupId>
+  <artifactId>java-parent</artifactId>
+  ...
+</parent>
+...
 <properties>
   ...
-  <java.below-version>12</java.below-version>
-  <java.version>11</java.version>
+  <java.require.version>[11,12)</java.require.version>
+  <java.target.version>11</java.target.version>
   ...
 </properties>
 ```

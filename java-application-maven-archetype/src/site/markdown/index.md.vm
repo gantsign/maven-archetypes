@@ -80,8 +80,7 @@ archetype. The GantSign Maven Archetype provides the following:
 Requirements
 ------------
 
-* Java 1.8
-    * **because this archetype uses a post-generate Groovy script it doesn't work on Java 9+**
+* Java 11
 * Maven 3.5
 
 Usage
