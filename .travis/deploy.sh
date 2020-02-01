@@ -19,5 +19,6 @@ gpg --list-secret-keys --verbose
     -P publish-artifacts,sign-artifacts,ossrh-deploy \
     --settings .travis/settings.xml \
     -Darchetype.test.skip=true \
+    "-Drevision=${TRAVIS_TAG:-development-SNAPSHOT}" \
     --batch-mode \
     --show-version
