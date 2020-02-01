@@ -24,8 +24,8 @@
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
     <jacoco.skip>false</jacoco.skip>
 
-    <java.below-version>9</java.below-version>
-    <java.version>1.8</java.version>
+    <java.target.version>1.8</java.target.version>
+    <java.require.version>[1.8,9)</java.require.version>
 
     <!-- Check dependencies are used, declared and have the correct scope -->
     <mdep.analyze.skip>false</mdep.analyze.skip>

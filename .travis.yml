@@ -4,7 +4,7 @@ dist: xenial
 language: java
 
 jdk:
-  - openjdk8
+  - openjdk11
 
 install: .travis/install.sh
 

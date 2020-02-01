@@ -6,22 +6,8 @@ $h1 ${projectName}
 
 $h2 Requirements
 
-* Java 8
+* Java 11
 * Direct internet access / Apache Maven proxy configured
-
-$h3 Changing the required Java version
-
-Java 8 is required by default. To move the project to Java 11, change the following two properties
-in your `pom.xml`:
-
-```xml
-<properties>
-  ...
-  <java.below-version>12</java.below-version>
-  <java.version>11</java.version>
-  ...
-</properties>
-```
 
 $h2 Building
 
