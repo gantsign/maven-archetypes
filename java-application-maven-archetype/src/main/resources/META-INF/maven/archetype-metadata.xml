@@ -65,6 +65,7 @@
         <include>.editorconfig</include>
         <include>.gitattributes</include>
         <include>.gitignore</include>
+        <include>lombok.config</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
