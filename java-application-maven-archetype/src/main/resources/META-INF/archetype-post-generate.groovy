@@ -47,8 +47,8 @@ def writeInspectionProfile() {
     settings.setText(contents, "UTF-8")
 }
 
-run("mvn -N io.takari:maven:wrapper")
-run("./mvnw sortpom:sort")
-run("./mvnw fmt:format")
+run("mvn -N io.takari:maven:wrapper -DskipNotification")
+run("./mvnw sortpom:sort -DskipNotification")
+run("./mvnw fmt:format -DskipNotification")
 writeCodeStyle()
 writeInspectionProfile()
