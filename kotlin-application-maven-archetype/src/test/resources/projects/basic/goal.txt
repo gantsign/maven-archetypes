@@ -1,1 +1,1 @@
-clean install site -P docker-local -Djacoco.skip=true -Dlicense.skipUpdateLicense=true -Djava.target.version=11 -Djava.require.version=11
+clean install site -P docker-local -Djacoco.skip=true -Dlicense.skipUpdateLicense=true -Djava.target.version=11 -Djava.require.version=11 -DskipNotification
