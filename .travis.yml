@@ -11,7 +11,6 @@ install: .travis/install.sh
 jobs:
   include:
     - stage: Test
-      sudo: required
 
       # Require Docker
       services:
