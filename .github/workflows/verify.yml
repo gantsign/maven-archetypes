@@ -1,0 +1,28 @@
+name: Verify
+
+on:
+  pull_request: {}
+
+env:
+  JAVA_TOOL_OPTIONS: >-
+    -XX:TieredStopAtLevel=1
+    -XX:+UseParallelGC
+    -Dstyle.color=always
+    -Djansi.force=true
+
+jobs:
+  build:
+    name: Maven build
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - name: Build with Maven
+        run: |-
+          export GIT_TAG="${GITHUB_REF#refs/tags/}"
+          .github/scripts/build.sh
