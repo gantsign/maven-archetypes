@@ -18,7 +18,7 @@ set -x
 
 ./mvnw scm-publish:publish-scm \
     -P gh-pages \
-    --settings .travis/settings.xml \
+    --settings .github/scripts/settings.xml \
     -Darchetype.test.skip=true \
     "-Drevision=${GIT_TAG:-development-SNAPSHOT}" \
     --batch-mode
