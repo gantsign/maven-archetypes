@@ -97,7 +97,7 @@
             <phase>process-sources</phase>
             <configuration>
               <roots>${dollar}{basedir}</roots>
-              <includes>.editorconfig,.gitattributes,.travis.yml,pom.xml</includes>
+              <includes>.editorconfig,.gitattributes,pom.xml</includes>
               <extraExtensions>
                 <editorconfig>properties</editorconfig>
                 <gitattributes>properties</gitattributes>
