@@ -1,7 +1,7 @@
 Maven Archetypes
 ================
 
-[![Build Status](https://travis-ci.org/gantsign/maven-archetypes.svg?branch=master)](https://travis-ci.org/gantsign/maven-archetypes)
+[![Release](https://github.com/gantsign/maven-archetypes/workflows/Build/badge.svg)](https://github.com/gantsign/maven-archetypes/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.gantsign.maven.archetypes/maven-archetypes/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.gantsign.maven.archetypes/maven-archetypes)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
