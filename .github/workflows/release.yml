@@ -79,5 +79,5 @@ jobs:
           export GIT_TAG="${GITHUB_REF#refs/tags/}"
           .github/scripts/deploy-site.sh
         env:
-          GITHUB_USER: ${{ secrets.GITHUB_USER }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ secrets.GH_USER }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
