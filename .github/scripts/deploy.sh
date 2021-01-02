@@ -5,7 +5,7 @@ set -x
 
 ./mvnw deploy \
     -P publish-artifacts,sign-artifacts,ossrh-deploy \
-    --settings .travis/settings.xml \
+    --settings .github/scripts/settings.xml \
     -Darchetype.test.skip=true \
     "-Drevision=${GIT_TAG:-development-SNAPSHOT}" \
     --batch-mode \
