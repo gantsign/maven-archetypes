@@ -23,9 +23,7 @@ jobs:
         with:
           java-version: '11'
       - name: Build with Maven
-        run: |-
-          export GIT_TAG="${GITHUB_REF#refs/tags/}"
-          .github/scripts/build.sh
+        run: .github/scripts/build.sh
 
   deploy:
     name: Maven deploy
@@ -42,9 +40,7 @@ jobs:
           ${{ secrets.GPG_KEY }}
           EOF
       - name: Deploy with Maven
-        run: |-
-          export GIT_TAG="${GITHUB_REF#refs/tags/}"
-          .github/scripts/deploy.sh
+        run: .github/scripts/deploy.sh
         env:
           OSSRH_USER: ${{ secrets.OSSRH_USER }}
           OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
