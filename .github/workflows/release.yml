@@ -72,8 +72,8 @@ jobs:
           java-version: '11'
       - name: Configure Git user
         run: >-
-          git config user.name 'John Freeman' &&
-          git config user.name '17984707+freemanjp@users.noreply.github.com'
+          git config --global user.name 'John Freeman' &&
+          git config --global user.email '17984707+freemanjp@users.noreply.github.com'
       - name: Deploy Maven site
         run: |-
           export GIT_TAG="${GITHUB_REF#refs/tags/}"
