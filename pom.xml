@@ -6,7 +6,7 @@
     <groupId>com.github.gantsign.parent</groupId>
     <artifactId>common-parent</artifactId>
     <version>2.13.0</version>
-    <relativePath />
+    <relativePath/>
   </parent>
 
   <groupId>com.github.gantsign.maven.archetypes</groupId>
