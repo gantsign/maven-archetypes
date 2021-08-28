@@ -32,7 +32,7 @@
   <dependencies>
     <dependency>
       <groupId>io.github.microutils</groupId>
-      <artifactId>kotlin-logging</artifactId>
+      <artifactId>kotlin-logging-jvm</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
