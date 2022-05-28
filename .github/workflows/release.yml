@@ -13,7 +13,7 @@ env:
 jobs:
   build:
     name: Maven build
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
@@ -29,7 +29,7 @@ jobs:
 
   deploy:
     name: Maven deploy
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: build
     steps:
       - name: Checkout
@@ -61,7 +61,7 @@ jobs:
 
   deploy-site:
     name: Maven deploy site
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: deploy
     steps:
       - name: Checkout
