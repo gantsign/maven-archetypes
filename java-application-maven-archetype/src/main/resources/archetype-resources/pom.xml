@@ -6,8 +6,6 @@
     <!-- See https://github.com/gantsign/maven-parent-poms -->
     <groupId>com.github.gantsign.parent</groupId>
     <artifactId>java-parent</artifactId>
-    <!-- For Java 8 use the following alternate parent artifact ID -->
-    <!-- <artifactId>java8-parent</artifactId> -->
     <version>${gantsign-parent.version}</version>
     <relativePath />
   </parent>
