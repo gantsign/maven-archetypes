@@ -25,7 +25,7 @@
   </modules>
 
   <properties>
-    <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.5.0/checkstyle.xml</checkstyle.config-location>
+    <checkstyle.config-location>https://raw.githubusercontent.com/gantsign/checkstyle-config/3.7.0/checkstyle.xml</checkstyle.config-location>
     <checkstyle.config-name>GantSign</checkstyle.config-name>
     <dollar>$</dollar>
     <gantsign-parent.version>3.3.0</gantsign-parent.version>
