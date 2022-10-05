@@ -75,7 +75,7 @@ Requirements
 ------------
 
 * Java 11
-* Maven 3.5
+* Maven >= 3.5
 
 Usage
 -----
