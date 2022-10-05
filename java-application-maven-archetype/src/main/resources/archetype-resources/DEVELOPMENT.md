@@ -6,7 +6,7 @@ $h1 ${projectName}
 
 $h2 Requirements
 
-* Java 11
+* Java 17
 * Direct internet access / Apache Maven proxy configured
 
 $h2 Building

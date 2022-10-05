@@ -63,6 +63,7 @@
         <include>.editorconfig</include>
         <include>.gitattributes</include>
         <include>.gitignore</include>
+        <include>.mvn/jvm.config</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">

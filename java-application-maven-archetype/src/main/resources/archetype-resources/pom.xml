@@ -24,8 +24,8 @@
     <jacoco.file.minimum-coverage-ratio>0.75</jacoco.file.minimum-coverage-ratio>
     <jacoco.skip>false</jacoco.skip>
 
-    <java.require.version>[11,12)</java.require.version>
-    <java.target.version>11</java.target.version>
+    <java.require.version>[17,18)</java.require.version>
+    <java.target.version>17</java.target.version>
 
     <!-- Check dependencies are used, declared and have the correct scope -->
     <mdep.analyze.skip>false</mdep.analyze.skip>
@@ -70,6 +70,15 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <configuration>
+          <from>
+            <image>gcr.io/distroless/java${dollar}{java.target.version}-debian11:nonroot</image>
+          </from>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

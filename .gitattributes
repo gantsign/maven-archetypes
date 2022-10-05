@@ -25,6 +25,7 @@
 *.xml text
 *.yaml text
 *.yml text
+jvm.config text
 LICENSE text
 lombok.config text
 
