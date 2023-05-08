@@ -22,7 +22,7 @@ public class MainIT {
       throws Exception {
 
     String actual = execute("docker", "run", "--rm", DOCKER_IMAGE).trim();
-    assertThat(actual).endsWith(".Main - Hello, World!");
+    assertThat(actual).endsWith(".Main -- Hello, World!");
   }
 
   private static String execute(String... commandLine)

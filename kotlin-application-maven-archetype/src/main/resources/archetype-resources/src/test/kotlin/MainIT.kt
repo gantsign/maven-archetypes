@@ -28,6 +28,6 @@ class MainIT {
     @Test
     fun main() {
         val actual = execute("docker", "run", "--rm", DOCKER_IMAGE)
-        assertThat(actual).endsWith(".Main - Hello, World!")
+        assertThat(actual).endsWith(".Main -- Hello, World!")
     }
 }

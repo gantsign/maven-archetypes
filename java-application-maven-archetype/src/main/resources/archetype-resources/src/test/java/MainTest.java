@@ -30,7 +30,7 @@ public class MainTest {
   @Test
   public void main() throws Exception {
     String actual = captureStdout(() -> Main.main(new String[0]));
-    assertThat(actual).endsWith(".Main - Hello, World!");
+    assertThat(actual).endsWith(".Main -- Hello, World!");
   }
 
   @Test
