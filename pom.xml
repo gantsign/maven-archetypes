@@ -29,8 +29,8 @@
     <checkstyle.config-name>GantSign</checkstyle.config-name>
     <dollar>$</dollar>
     <gantsign-parent.version>3.6.0</gantsign-parent.version>
-    <java.require.version>[11,12)</java.require.version>
-    <java.target.version>11</java.target.version>
+    <java.require.version>[17,18)</java.require.version>
+    <java.target.version>17</java.target.version>
     <maven-archetype-plugin.version>3.2.1</maven-archetype-plugin.version>
   </properties>
 

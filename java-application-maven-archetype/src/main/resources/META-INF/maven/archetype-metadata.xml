@@ -65,6 +65,7 @@
         <include>.editorconfig</include>
         <include>.gitattributes</include>
         <include>.gitignore</include>
+        <include>.mvn/jvm.config</include>
         <include>lombok.config</include>
       </includes>
     </fileSet>

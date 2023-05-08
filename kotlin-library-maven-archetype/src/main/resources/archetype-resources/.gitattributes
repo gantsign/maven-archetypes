@@ -30,6 +30,7 @@
 *.xml text
 *.yaml text
 *.yml text
+jvm.config text
 LICENSE text
 
 # Declare files that will always have CRLF line endings on checkout.
