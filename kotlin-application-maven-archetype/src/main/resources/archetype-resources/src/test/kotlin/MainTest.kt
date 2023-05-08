@@ -29,7 +29,7 @@ class MainTest {
     @Test
     fun testMain() {
         val actual = captureStdout { main(arrayOf()) }
-        assertThat(actual).endsWith(".Main - Hello, World!")
+        assertThat(actual).endsWith(".Main -- Hello, World!")
     }
 
 }
