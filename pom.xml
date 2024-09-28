@@ -31,7 +31,7 @@
     <gantsign-parent.version>3.7.0</gantsign-parent.version>
     <java.require.version>[17,18)</java.require.version>
     <java.target.version>17</java.target.version>
-    <maven-archetype-plugin.version>3.2.1</maven-archetype-plugin.version>
+    <maven-archetype-plugin.version>3.3.0</maven-archetype-plugin.version>
   </properties>
 
   <dependencyManagement>
